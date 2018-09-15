@@ -1,0 +1,276 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+body, button, input, textarea {
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 18px; }
+
+.contenedor-general {
+  min-height: 100%;
+  overflow: hidden; }
+
+.contenedor-main {
+  flex-grow: 1;
+  order: 4;
+  background-color: #fafafa; }
+
+.contenedor {
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  margin: 30px auto 0;
+  max-width: 935px;
+  padding-bottom: 44px;
+  widows: 100%; }
+
+.contenedor-imagen {
+  align-self: center;
+  background-image: url(/images/Fondo-portada.png);
+  background-position: 0 0;
+  background-size: 454px 618px;
+  flex-basis: 454px;
+  height: 618px;
+  margin-left: -35px;
+  margin-right: -15px; }
+
+.div-imagen {
+  margin: 99px 0 0 151px;
+  position: relative; }
+
+.imagen {
+  height: 427px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 240px;
+  opacity: 1;
+  visibility: visible; }
+
+.contenedor-forms {
+  color: #262626;
+  flex-grow: 1;
+  justify-content: center;
+  margin-top: 12px;
+  max-width: 350px; }
+
+.signup-box, .login-box {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0; }
+
+.titulo {
+  margin: 22px auto 12px;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap; }
+
+.cont_form-signup {
+  margin-bottom: 20px; }
+
+/* form */
+.form-signup {
+  display: flex;
+  flex-direction: column; }
+
+/* h2 */
+.slogan {
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 17px;
+  margin: 0 40px 10px;
+  color: #999;
+  text-align: center; }
+
+/* span botones */
+.span-btn {
+  margin: 8px 40px;
+  display: block;
+  position: relative; }
+
+/* botones */
+.botones {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  outline: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  white-space: nowrap;
+  width: 100%; }
+
+/* span interno botones */
+.det-btn {
+  display: inline-block;
+  margin-right: 8px;
+  position: relative;
+  top: 3px; }
+
+/* divicion en el form */
+.divform {
+  flex-direction: row;
+  margin: 10px 40px 18px; }
+
+.linea {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: #efefef;
+  height: 1px;
+  position: relative;
+  top: .45em; }
+
+/* o entre lineas */
+.letdiv {
+  color: #999;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  margin: 0 18px;
+  text-transform: uppercase; }
+
+/* inputs */
+/* div contenedor input */
+.cont-input {
+  margin: 0 40px 6px; }
+
+/* segundo div contenedor */
+.input-signup, .cont2-input {
+  background: #fafafa; }
+
+.cont2-input {
+  align-items: center;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #262626;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  border: 1px solid #efefef; }
+
+.cont3-input {
+  height: 36px;
+  flex: 1 0 0;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  min-width: 0;
+  font-size: 16px; }
+
+/* input  */
+.input-signup {
+  border: 0;
+  flex: 1 0 0px;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  padding: 9px 0 7px 8px;
+  text-overflow: ellipsis; }
+
+/* ultimo div */
+.div-soport {
+  align-items: center;
+  flex: 0 0 auto;
+  flex-direction: row;
+  height: 100%;
+  padding-right: 8px;
+  vertical-align: middle; }
+
+/* boton registrar */
+.color-btns {
+  background: #3897f0;
+  border-color: #3897f0;
+  color: #fff; }
+
+.KUBKM {
+  padding: 0 12px; }
+
+.cursor {
+  cursor: pointer; }
+
+/* texto de terminos y condiciones */
+.ter_y_cond {
+  color: #999;
+  margin: 10px 60px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center; }
+
+.ter_y_cond a {
+  color: #999;
+  font-weight: 600; }
+
+/* texto login */
+.texto-login {
+  color: #262626;
+  font-size: 14px;
+  margin: 15px;
+  text-align: center; }
+
+/* contenedor descargas */
+/* parrafo */
+.texto-descarga {
+  color: #262626;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 10px 20px;
+  text-align: center; }
+
+/* contenedor logos tiendas */
+.contenedor-logos-tiendas {
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0; }
+
+/* a descargas */
+.a-descargas {
+  margin-right: 8px; }
+
+/* imagen tiendas */
+.logos-tienda {
+  height: 40px; }
+
+.texto-login a {
+  color: #3897f0; }
+
+a {
+  text-decoration: none; }
+
+article,
+div,
+footer,
+main,
+section {
+  align-items: stretch;
+  border: 0 solid #000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+.coreSpriteLoggedOutWordmark, .coreSpriteMobileNavDirect {
+  background-repeat: no-repeat;
+  background-position: -98px -150px;
+  height: 51px;
+  width: 175px;
+  background-image: url(/images/logos-e-iconos.png); }
