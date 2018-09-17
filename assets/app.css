@@ -16,13 +16,24 @@ body, button, input, textarea {
   overflow: hidden; }
 
 .contenedor-main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
   order: 4;
   background-color: #fafafa; }
 
 .contenedor {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 30px auto 0;
   max-width: 935px;
@@ -30,10 +41,12 @@ body, button, input, textarea {
   widows: 100%; }
 
 .contenedor-imagen {
+  -ms-flex-item-align: center;
   align-self: center;
-  background-image: url(/images/Fondo-portada.png);
+  background-image: url(/public/Fondo-portada.png);
   background-position: 0 0;
   background-size: 454px 618px;
+  -ms-flex-preferred-size: 454px;
   flex-basis: 454px;
   height: 618px;
   margin-left: -35px;
@@ -56,7 +69,11 @@ body, button, input, textarea {
 
 .contenedor-forms {
   color: #262626;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 12px;
   max-width: 350px; }
@@ -80,7 +97,12 @@ body, button, input, textarea {
 
 /* form */
 .form-signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 /* h2 */
@@ -109,6 +131,9 @@ body, button, input, textarea {
   outline: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   white-space: nowrap;
   width: 100%; }
@@ -122,11 +147,17 @@ body, button, input, textarea {
 
 /* divicion en el form */
 .divform {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   margin: 10px 40px 18px; }
 
 .linea {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   background-color: #efefef;
   height: 1px;
@@ -136,7 +167,10 @@ body, button, input, textarea {
 /* o entre lineas */
 .letdiv {
   color: #999;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   font-size: 13px;
   font-weight: 600;
@@ -154,11 +188,19 @@ body, button, input, textarea {
   background: #fafafa; }
 
 .cont2-input {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-radius: 3px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #262626;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   font-size: 14px;
   position: relative;
@@ -167,6 +209,8 @@ body, button, input, textarea {
 
 .cont3-input {
   height: 36px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0px;
   flex: 1 0 0;
   padding: 0;
   position: relative;
@@ -177,6 +221,8 @@ body, button, input, textarea {
 /* input  */
 .input-signup {
   border: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0px;
   flex: 1 0 0px;
   margin: 0;
   outline: 0;
@@ -186,8 +232,15 @@ body, button, input, textarea {
 
 /* ultimo div */
 .div-soport {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   height: 100%;
   padding-right: 8px;
@@ -235,7 +288,12 @@ body, button, input, textarea {
 
 /* contenedor logos tiendas */
 .contenedor-logos-tiendas {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 10px 0; }
 
@@ -258,11 +316,20 @@ div,
 footer,
 main,
 section {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
   border: 0 solid #000;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 0;
   padding: 0;
@@ -273,4 +340,4 @@ section {
   background-position: -98px -150px;
   height: 51px;
   width: 175px;
-  background-image: url(/images/logos-e-iconos.png); }
+  background-image: url(/public/logos-e-iconos.png); }

@@ -2,7 +2,10 @@ const gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    babel = require('@babel/core'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream');
 
 
 gulp.task('sass', (done) => {
@@ -14,7 +17,13 @@ gulp.task('sass', (done) => {
         .pipe(sass({
             includePaths: ['scss']
         }))
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('assets'));
+        done();
+});
+
+gulp.task('assets', function (done) {
+    gulp.src('assets/*')
+        .pipe(gulp.dest('public'));
         done();
 });
 
@@ -23,6 +32,17 @@ gulp.task('watch', function (done) {
         .pipe(watch('scss/*.scss'))
         .pipe(plumber())
         .pipe(sass())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('assets'));
         done();
 });
+
+gulp.task('scripts', function (done){
+    browserify({
+        entries: 'src/index.js',
+        debug: true
+      })
+      .bundle()
+      .pipe(source('index.js'))
+      .pipe(gulp.dest('./public'));
+      done()
+})
