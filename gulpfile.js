@@ -45,4 +45,6 @@ gulp.task('scripts', function (done){
       .pipe(source('index.js'))
       .pipe(gulp.dest('./public'));
       done()
-})
+});
+
+
