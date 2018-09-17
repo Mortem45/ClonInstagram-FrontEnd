@@ -3,9 +3,10 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
     plumber = require('gulp-plumber'),
-    babel = require('@babel/core'),
     browserify = require('browserify'),
-    source = require('vinyl-source-stream');
+    source = require('vinyl-source-stream'),
+    gutil = require('gulp-util'),
+    watchify = require('watchify');  
 
 
 gulp.task('sass', (done) => {
@@ -27,7 +28,7 @@ gulp.task('assets', function (done) {
         done();
 });
 
-gulp.task('watch', function (done) {
+gulp.task('watch-style', function (done) {
     return gulp.src('scss/*.scss')
         .pipe(watch('scss/*.scss'))
         .pipe(plumber())
@@ -47,4 +48,20 @@ gulp.task('scripts', function (done){
       done()
 });
 
+gulp.task('watch', function() {
+    watchify.args.debug = true;
+    var bundler = watchify(browserify('./src/index.js', watchify.args));
+    bundler.on('update', rebundle);
+    bundler.on('log', gutil.log.bind(gutil));
+  
+    function rebundle() {
+      return bundler.bundle()
+        .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+        .pipe(source('index.js'))
+        .pipe(gulp.dest('./public'));
+    }
+  
+    return rebundle();
+  });
 
+gulp.task('default', gulp.series('sass','assets','scripts'));

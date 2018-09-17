@@ -4,7 +4,7 @@
   "description": "esta es un clon de instagram, hecha con fines educativos.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js $ gulp watch "
   },
   "author": "Brandon Estiben Monterrozo",
   "license": "MIT",
@@ -17,16 +17,20 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
   ],
   "dependencies": {
+    "empty-element": "^1.0.0",
     "express": "^4.16.3",
     "page": "^1.10.1",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "yo-yo": "^1.4.1"
   }
 }

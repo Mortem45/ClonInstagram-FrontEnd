@@ -43,7 +43,7 @@ body, button, input, textarea {
 .contenedor-imagen {
   -ms-flex-item-align: center;
   align-self: center;
-  background-image: url(/public/Fondo-portada.png);
+  background-image: url(Fondo-portada.png);
   background-position: 0 0;
   background-size: 454px 618px;
   -ms-flex-preferred-size: 454px;
@@ -340,4 +340,4 @@ section {
   background-position: -98px -150px;
   height: 51px;
   width: 175px;
-  background-image: url(/public/logos-e-iconos.png); }
+  background-image: url(logos-e-iconos.png); }
