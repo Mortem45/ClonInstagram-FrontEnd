@@ -1,15 +1,293 @@
 html {
   box-sizing: border-box; }
 
+._3Laht, .o64aR {
+  background-color: #fafafa; }
+
+.navegacion {
+  background-color: #fafafa;
+  padding: 0;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2; }
+
+.gW4DF, .jLuN9 {
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0; }
+
+.div-nav {
+  -ms-flex-preferred-size: 75px;
+  flex-basis: 75px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2; }
+
+.MWDvN, .aUCRo {
+  height: 52px; }
+
+.MWDvN {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 77px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 1010px;
+  padding: 26px 40px;
+  -webkit-transition: height .2s ease-in-out;
+  transition: height .2s ease-in-out;
+  width: 100%; }
+
+.barra-naveg {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: height .2s ease-in-out;
+  transition: height .2s ease-in-out;
+  height: 77px; }
+
+.MWDvN, .barra-naveg, .aUCRo {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.buoMu {
+  height: 52px;
+  padding: 0 40px; }
+
+.oJZym {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 9999 0%;
+  flex: 1 9999 0%;
+  min-width: 40px; }
+
+.aU2HW {
+  margin-right: 12px;
+  margin-top: -4px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative; }
+
+._7mese {
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out; }
+
+.Szr5J {
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap; }
+
+.coreSpriteDesktopNavLogoAndWordmark {
+  background-repeat: no-repeat;
+  background-position: -98px -203px;
+  height: 35px;
+  width: 176px; }
+
+.efNlB {
+  top: 4px;
+  position: absolute;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out; }
+
+.buoMu ._7mese, .efNlB {
+  pointer-events: none;
+  opacity: 0; }
+
+.coreSpriteGlyphBlack {
+  background-position: -458px -160px;
+  height: 30px;
+  width: 30px; }
+
+.coreSpriteGallery, .coreSpriteGlyphBlack {
+  background-repeat: no-repeat;
+  background-position: -458px -288px;
+  height: 24px;
+  width: 24px; }
+
+.LWmhU {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  min-width: 125px;
+  width: 215px; }
+
+._0aCwM {
+  height: 28px; }
+
+.x3qfX:placeholder-shown {
+  font-size: 16px; }
+
+.XTCLo {
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  outline: 0;
+  padding: 3px 10px 3px 26px;
+  z-index: 2; }
+
+.XTCLo, .pbgfb {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%; }
+
+.Di7vw {
+  background: #fafafa;
+  border: solid 1px #dbdbdb;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.pbgfb {
+  border-radius: 3px;
+  color: #999;
+  cursor: text;
+  font-size: 14px;
+  font-weight: 300;
+  left: 0;
+  padding: 7px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  z-index: 2; }
+
+.eyXLr {
+  display: inline;
+  left: -5px; }
+
+._6RZXI {
+  margin-right: 6px;
+  vertical-align: baseline; }
+
+.TqC_a, ._6RZXI {
+  display: inline-block; }
+
+.TqC_a {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  white-space: nowrap; }
+
+.coreSpriteSearchIcon, .coreSpriteSensitivityIcon {
+  background-repeat: no-repeat;
+  background-position: -445px -409px;
+  height: 10px;
+  width: 10px; }
+
+.ctQZg {
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0%;
+  flex: 1 0 0%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.ZcHy5, ._47KiJ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-left: 24px;
+  white-space: nowrap; }
+
+.coreSpriteDesktopNavExplore {
+  background-position: -261px -357px; }
+
+.coreSpriteDesktopNavDirect, .coreSpriteDesktopNavExplore {
+  background-repeat: no-repeat;
+  background-position: -458px -392px;
+  height: 24px;
+  width: 24px; }
+
+.XrOey:not(:first-child) {
+  margin-left: 30px; }
+
+._0ZPOP {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: transparent;
+  position: relative; }
+
+.coreSpriteDesktopNavActivity {
+  background-repeat: no-repeat;
+  background-position: -183px -357px;
+  height: 24px;
+  width: 24px; }
+
+.coreSpriteDesktopNavProfile {
+  background-repeat: no-repeat;
+  background-position: -432px -316px;
+  height: 24px;
+  width: 24px; }
+
+._1SP8R {
+  padding-top: 60px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+  width: 100%; }
+
+.j9XKR {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  max-width: 935px; }
+
 *,
 *:after,
 *:before {
   box-sizing: inherit; }
 
+body {
+  overflow-y: scroll; }
+
+#react-root {
+  z-index: 0; }
+
 body, button, input, textarea {
   font-family: Roboto,Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 18px; }
+
+#react-root, body, html {
+  height: 100%; }
 
 .contenedor-general {
   min-height: 100%;
@@ -339,5 +617,36 @@ section {
   background-repeat: no-repeat;
   background-position: -98px -150px;
   height: 51px;
-  width: 175px;
+  width: 175px; }
+
+.coreSpriteActivityHeart, .coreSpriteAddText, .coreSpriteAppIcon, .coreSpriteAppStoreButton, .coreSpriteApproveLarge, .coreSpriteBoomerang, .coreSpriteCall, .coreSpriteCheck, .coreSpriteChevronDark, .coreSpriteChevronDownGrey, .coreSpriteChevronRight, .coreSpriteCi, .coreSpriteClose, .coreSpriteCloseLight, .coreSpriteCommentLike, .coreSpriteCommentLikeActive, .coreSpriteDesktopNavActivity, .coreSpriteDesktopNavDirect, .coreSpriteDesktopNavExplore, .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile, .coreSpriteDesktopPhotoGrid, .coreSpriteDesktopPhotoGridActive, .coreSpriteDesktopProfileIGTV, .coreSpriteDesktopProfileIGTVActive, .coreSpriteDesktopProfileSave, .coreSpriteDesktopProfileSaveActive, .coreSpriteDesktopProfileTagged, .coreSpriteDesktopProfileTaggedActive, .coreSpriteDirectHeart, .coreSpriteDismissLarge, .coreSpriteDismissSmall, .coreSpriteDownload, .coreSpriteDropdownArrowBlue5, .coreSpriteDropdownArrowBlue6, .coreSpriteDropdownArrowGrey9, .coreSpriteDropdownArrowWhite, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted, .coreSpriteFbGlyph, .coreSpriteGallery, .coreSpriteGlyphBlack, .coreSpriteGlyphGradient, .coreSpriteGlyphWhite, .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartSmall, .coreSpriteHyperlapse, .coreSpriteIgLiteHalfsheetInstagramLogo, .coreSpriteInfo, .coreSpriteInputAccepted, .coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteKeyhole, .coreSpriteLeftChevron, .coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart, .coreSpriteLocation, .coreSpriteLocationActive, .coreSpriteLock, .coreSpriteLockLarge, .coreSpriteLockSmall, .coreSpriteLoggedOutGenericUpsell, .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavDirect, .coreSpriteMobileNavTypeLogo, .coreSpriteNavBack, .coreSpriteNotificationLeftChevron, .coreSpriteNotificationRightChevron, .coreSpriteNullProfile, .coreSpriteOptionsEllipsis, .coreSpriteOptionsEllipsisLight, .coreSpritePagingChevron, .coreSpritePlayIconSmall, .coreSpritePrivateLock, .coreSpriteProfileCamera, .coreSpriteReload, .coreSpriteRightChevron, .coreSpriteRightPaginationArrow, .coreSpriteSaveNull, .coreSpriteSaveStory, .coreSpriteSearchClear, .coreSpriteSearchIcon, .coreSpriteSensitivityIcon, .coreSpriteSensitivityIconSmall, .coreSpriteSidecarIconLarge, .coreSpriteSidecarIconSmall, .coreSpriteSpeechBubbleSmall, .coreSpriteSpinsta, .coreSpriteSpinstaNux, .coreSpriteSpinstaStory, .coreSpriteStar, .coreSpriteStoryCreation, .coreSpriteStoryCreationAlt, .coreSpriteStoryRing, .coreSpriteStoryViewCount, .coreSpriteTaggedNull, .coreSpriteUnreadComments, .coreSpriteUnreadLikes, .coreSpriteUnreadRelationships, .coreSpriteUnreadUsertags, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge, .coreSpriteVerifiedBadgeSmall, .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall, .coreSpriteVideoNux, .coreSpriteViewCount, .coreSpriteWindowsStoreButton {
   background-image: url(logos-e-iconos.png); }
+
+a, article, b, body, canvas, div, figure, footer, form, h1, h2, h3, h4, h5, h6,
+header, html, i img, label, menu, nav, p, section,
+span, strong {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline; }
+
+#react-root, article, div, footer, header, main, nav, section {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border: 0 solid #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  position: relative; }
