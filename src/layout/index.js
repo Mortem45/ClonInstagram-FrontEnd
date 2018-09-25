@@ -4,19 +4,7 @@ module.exports = function layout(content){
 return yo`<span id="react-root">
 <section class="contenedor-general">
     <main class="contenedor-main" role="main">
-        <section class="_1SP8R j9XKR ">
-            <div class="cGcGK">
-                <div>
-                    <div style="flex-direction: column; padding-bottom: 5600px; padding-top: 0px;">
-                        ${content}
-                    </div>
-                </div>
-                <div class="Id0Rh">
-                    <div class="W1Bne   ztp9m "></div>
-                </div>
-            </div>
-            <div class="XmSS_"></div>
-        </section>
+            ${content}
     </main>
     <nav class="navegacion">
         <div class="div-nav"></div>

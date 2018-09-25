@@ -4,5 +4,6 @@ const page = require('page'),
       
 page('/',function(ctx ,next){
     let main = document.getElementById('main-container');
-    empty(main).appendChild(template);
+    let posts = [1, 2, 3, 4, 5];
+    empty(main).appendChild(template(posts));
 })
