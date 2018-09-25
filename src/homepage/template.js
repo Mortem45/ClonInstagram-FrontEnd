@@ -9,7 +9,7 @@ const yo = require('yo-yo'),
             <div>
                 <div style="flex-direction: column; padding-bottom: 5600px; padding-top: 0px;">   
                     ${posts.map(function (pos){
-                        return post;
+                        return post(pos);
                     })}
                 </div>
             </div>

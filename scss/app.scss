@@ -528,21 +528,6 @@ a{
     text-decoration: none;
 }
 
-article,
-div,
-footer,
-main,
-section {
-    align-items: stretch;
-    border: 0 solid #000;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
 
 .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavDirect {
     background-repeat: no-repeat;
@@ -709,11 +694,7 @@ a, a:visited {
     bottom: 0;
     right: 0;
 }
-.FFVAD, ._9AhH0 {
-    left: 0;
-    position: absolute;
-    top: 0;
-}
+
 
 .FFVAD {
     height: 100%;
@@ -893,3 +874,11 @@ a, a:visited {
     height: 24px;
     width: 24px;
 }
+
+.glyphsSpriteSettings__outline__24__grey_9, .glyphsSpriteShare__outline__24__grey_9 {
+    background-repeat: no-repeat;
+    background-position: -104px -149px;
+    height: 24px;
+    width: 24px;
+}
+

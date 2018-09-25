@@ -1,19 +1,20 @@
 let yo = require('yo-yo');
-
-module.exports = yo`<article class="_8Rm4L M9sTE  L_LMM SgTZ1   ">
+ module.exports = function postCard(post) {
+    var el;
+    function render(post) {
+        return yo `<article class="_8Rm4L M9sTE  L_LMM SgTZ1   ">
         <header class="Ppjfr UE9AK ">
             <div class="RR-M-  mrq0Z" role="button" tabindex="0">
                 <canvas class="CfWVH" style="position: absolute; top: -5px; left: -5px; width: 40px; height: 40px;" width="36"
                     height="36"></canvas>
-                <a class="_2dbep qNELH kIKUG" style="width: 30px; height: 30px;" href="/tusecreto.io/">
-                    <img class="_6q-tv" src="post.jpg"
+                <a class="_2dbep qNELH kIKUG" style="width: 30px; height: 30px;" href="/user/${post.user.urlperfil}">
+                    <img class="_6q-tv" src="${post.user.avatar}"
                         alt="Foto del perfil"></a>
             </div>
 
             <div class="o-MQd  ">
                 <div class=" ">
-                    <div class="e1e1d"><a class="FPmhX notranslate nJAzx" title="tusecreto.io" href="/tusecreto.io/">Nombre
-                            de Perfil</a></div>
+                    <div class="e1e1d"><a class="FPmhX notranslate nJAzx" title="${post.user.username}" href="/user/${post.user.urlperfil}">${post.user.username}</a></div>
                 </div>
                 <div class="M30cS"></div>
             </div>
@@ -22,27 +23,28 @@ module.exports = yo`<article class="_8Rm4L M9sTE  L_LMM SgTZ1   ">
         <div class="_97aPb ">
             <div role="button" tabindex="0">
                 <div class="eLAPa kPFhm">
-                    <div style="padding-bottom: 100%;" class="KL4Bh">
-                        <img class="FFVAD" decoding="auto" sizes="613.7666625976562px" src="post.jpg"></div>
+                    <div style="padding-bottom:  84.1333%;" class="KL4Bh">
+                        <img class="FFVAD" decoding="auto" sizes="613.7666625976562px" src="${post.url}"></div>
                     <div class="_9AhH0"></div>
                 </div>
             </div>
         </div>
 
         <div class="eo2As ">
+
             <!-- botones -->
             <section class="ltpMr Slqrh">
                 <span class="fr66n">
-                    <button class="coreSpriteHeartOpen oF4XW dCJp8">
-                        <span class="glyphsSpriteHeart__outline__24__grey_9 u-__7" aria-label="Me gusta"></span>
+                    <button class="coreSpriteHeartOpen oF4XW dCJp8" onclick=${like}>
+                        <span class="glyphsSpriteHeart__outline__24__grey_9 u-__7" onclick=${like} aria-label="Me gusta"></span>
                     </button>
-                </span>
-                <span class="_15y0l">
-                    <button class="oF4XW dCJp8">
-                        <span class="glyphsSpriteComment__outline__24__grey_9 u-__7" aria-label="Comentar"></span>
-                    </button>
-                </span>
-                <span class="_5e4p">
+            </span>
+            <span class="_15y0l">
+                <button class="oF4XW dCJp8">
+                    <span class="glyphsSpriteComment__outline__24__grey_9 u-__7" aria-label="Comentar"></span>
+                </button>
+            </span>
+            <span class="_5e4p">
                     <button class="oF4XW dCJp8">
                         <span class="glyphsSpriteShare__outline__24__grey_9 u-__7" aria-label="Compartir publicación"></span>
                     </button>
@@ -56,10 +58,9 @@ module.exports = yo`<article class="_8Rm4L M9sTE  L_LMM SgTZ1   ">
             <!-- me gustas -->
             <section class="EDfFK ygqzn">
                 <div class="HbPOm y9v3U">
-                    <a class="zV_Nj" href="/p/BoH8IsQD7pS/liked_by/"><span>1,544</span> Me gusta</a>
+                    <a class="zV_Nj" href="/p/BoH8IsQD7pS/liked_by/"><span>${post.likes}</span> Me gusta</a>
                 </div>
             </section>
-
 
             <!-- agrega un comentario -->
             <section class="sH9wk  _JgwE ">
@@ -73,10 +74,31 @@ module.exports = yo`<article class="_8Rm4L M9sTE  L_LMM SgTZ1   ">
         </div>
 
         <div class="MEAGs">
-            <button class="oF4XW dCJp8">
+            <button class="oF4XW dCJp8" >
                 <span class="glyphsSpriteMore_horizontal__outline__24__grey_9 u-__7" aria-label="Más opciones">
                 </span>
             </button>
         </div>
 
-        </article>`
+        </article>`;
+    }
+
+    function like() {
+        post.liked = true;
+        post.likes++;
+        let newEl = render(post);
+        yo.update(el, newEl);
+        return false;
+    }
+
+    function dislike() {
+        post.liked = false;
+        post.likes--;
+        let newEl = render(post);
+        yo.update(el, newEl);
+        return false;
+    }
+
+    el = render(post);
+    return el;
+}
