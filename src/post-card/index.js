@@ -1,6 +1,21 @@
-let yo = require('yo-yo');
- module.exports = function postCard(post) {
+const yo = require('yo-yo');
+
+if(!window.Intl){
+    window.Intl = require('intl');
+    require('intl/locale-data/jsonp/en-US.js');
+    require('intl/locale-data/jsonp/es.js');
+}
+
+const IntlRelativeFormat = window.IntlRelativeFormat = require('intl-relativeformat');
+
+require('intl-relativeformat/dist/locale-data/en.js');
+require('intl-relativeformat/dist/locale-data/es.js');
+
+
+let rf = new IntlRelativeFormat('es');
+module.exports = function postCard(post) {
     var el;
+
     function render(post) {
         return yo `<article class="_8Rm4L M9sTE  L_LMM SgTZ1   ">
         <header class="Ppjfr UE9AK ">
@@ -35,8 +50,8 @@ let yo = require('yo-yo');
             <!-- botones -->
             <section class="ltpMr Slqrh">
                 <span class="fr66n">
-                    <button class="coreSpriteHeartOpen oF4XW dCJp8" onclick=${like}>
-                        <span class="glyphsSpriteHeart__outline__24__grey_9 u-__7" onclick=${like} aria-label="Me gusta"></span>
+                    <button class="coreSpriteHeartOpen oF4XW dCJp8" onclick=${post.liked ? like.bind(null, false) : like.bind(null, true)}>
+                        <span class="${post.liked ? 'glyphsSpriteHeart__filled__24__red_5' : 'glyphsSpriteHeart__outline__24__grey_9' } u-__7" aria-label="Me gusta"></span>
                     </button>
             </span>
             <span class="_15y0l">
@@ -62,6 +77,12 @@ let yo = require('yo-yo');
                 </div>
             </section>
 
+            <div class="k_Q0X NnvRN">
+                <a class="c-Yi7" href="/p/BoKkK8tnSCB/">
+                    <time class="_1o9PC Nzb55" datetime="" title="">${rf.format(post.createdAt)}</time>
+                </a>
+            </div>
+
             <!-- agrega un comentario -->
             <section class="sH9wk  _JgwE ">
                 <div class="RxpZH">
@@ -83,21 +104,15 @@ let yo = require('yo-yo');
         </article>`;
     }
 
-    function like() {
-        post.liked = true;
-        post.likes++;
+    function like(liked) {
+        post.liked = liked;
+        post.likes += liked ? 1 : -1;
         let newEl = render(post);
         yo.update(el, newEl);
         return false;
     }
 
-    function dislike() {
-        post.liked = false;
-        post.likes--;
-        let newEl = render(post);
-        yo.update(el, newEl);
-        return false;
-    }
+
 
     el = render(post);
     return el;

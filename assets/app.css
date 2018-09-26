@@ -219,14 +219,14 @@ html {
   padding-left: 24px;
   white-space: nowrap; }
 
-.coreSpriteDesktopNavExplore {
-  background-position: -261px -357px; }
-
 .coreSpriteDesktopNavDirect, .coreSpriteDesktopNavExplore {
   background-repeat: no-repeat;
   background-position: -458px -392px;
   height: 24px;
   width: 24px; }
+
+.coreSpriteDesktopNavExplore {
+  background-position: -261px -357px; }
 
 .XrOey:not(:first-child) {
   margin-left: 30px; }
@@ -976,3 +976,31 @@ a, a:visited {
   background-position: -104px -149px;
   height: 24px;
   width: 24px; }
+
+.glyphsSpriteHeart__filled__24__red_5 {
+  background-position: -52px -97px; }
+
+.glyphsSpriteHeart__filled__24__grey_9, .glyphsSpriteHeart__filled__24__red_5 {
+  background-repeat: no-repeat;
+  background-position: -26px -97px;
+  height: 24px;
+  width: 24px; }
+
+.EtaWk, .NnvRN {
+  margin-bottom: 4px; }
+
+.k_Q0X {
+  display: block; }
+
+.c-Yi7, .c-Yi7:visited {
+  color: #999;
+  margin-bottom: 5px;
+  text-transform: uppercase; }
+
+.Nzb55 {
+  font-size: 15px;
+  line-height: 18px; }
+
+.c-Yi7 ._1o9PC {
+  font-size: 10px;
+  letter-spacing: .2px; }
