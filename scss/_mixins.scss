@@ -16,6 +16,25 @@
     }
 }
 
+@mixin maxtelefono {
+    @media only screen and (max-width :#{$telefono}) {
+        @content;
+    }
+}
+
+@mixin maxtablet {
+    @media only screen and (max-width :#{$tablet}) {
+        @content;
+    }
+}
+
+@mixin maxdesktop {
+    @media only screen and (max-width :#{$desktop}) {
+        @content;
+    }
+}
+
 @mixin box-sizing($box-model) {
     box-sizing: $box-model;
 }
+

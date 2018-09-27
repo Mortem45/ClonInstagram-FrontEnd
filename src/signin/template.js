@@ -1,17 +1,18 @@
-const yo = require('yo-yo');
-let landing = require('../landing');
+const yo = require('yo-yo'),
+     landing = require('../landing'),
+    translate = require('../translate');
 
 let signinForm = yo`<div class="contenedor-forms ">
-<div class="signup-box ">
+<div class="signup-box">
     <h1 class=" titulo  coreSpriteLoggedOutWordmark">Instagram</h1>
     <div class="cont_form-signup">
         <form class="form-signup" method="post">
             <div class="cont-input">
-                <div class="cont2-input   ">
+                <div class="cont2-input ">
                     <div class="cont3-input ">
-                        <input class=" input-signup" id="email-tel" aria-label="Telefono, usuatio o correo electronico"
+                        <input class=" input-signup" id="email-tel" aria-label="${translate.message('signin.email')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="tel" name="emailOrPhone" type="text" placeholder="Telefono, usuatio o correo electronico">
+                            autocomplete="tel" name="emailOrPhone" type="text" placeholder="${translate.message('signin.email')}">
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -20,9 +21,9 @@ let signinForm = yo`<div class="contenedor-forms ">
                 <div class="cont2-input   ">
                     <div class="cont3-input ">
                         <input
-                            class=" input-signup    " id="password" aria-label="Contraseña"
+                            class=" input-signup    " id="password" aria-label="${translate.message('password')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="new-password" name="password" type="password" value="" placeholder="Contraseña">
+                            autocomplete="new-password" name="password" type="password" value="" placeholder="${translate.message('password')}">
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -30,22 +31,20 @@ let signinForm = yo`<div class="contenedor-forms ">
             
             <div>
                 <span class=" span-btn">
-                    <button class="botones  color-btns KUBKM cursor ">Iniciar sesion</button>
+                    <button class="botones  color-btns KUBKM cursor ">${translate.message('signin')}</button>
                 </span>
             </div>
-            <p class="ter_y_cond">Al registrarte, aceptas nuestras <a target="_blank" href="">Condiciones</a>,
-                la <a target="_blank" href="">Política de datos</a> y la
-                <a target="_blank" href="">Política de cookies</a>.</p>
+            <p class="ter_y_cond"> <a href="">${translate.message('recover')}</a></p>
         </form>
     </div>
 </div>
 <div class="login-box">
-    <p class="texto-login">¿No tienes una cuenta?
-        <a href="/signup">Registrate</a>
+    <p class="texto-login">${translate.message('signin.not-have-account')}
+        <a href="/signup">${translate.message('signup')}</a>
     </p>
 </div>
 <div class="">
-    <p class="texto-descarga">Descargar aplicación</p>
+    <p class="texto-descarga">${translate.message('download')}</p>
     <div class="contenedor-logos-tiendas">
         <a class="a-descargas" href="">
             <img class="logos-tienda" alt="Disponible en App Store" src="appStore.png">

@@ -1,0 +1,22 @@
+module.exports = {
+        'likes': '{ likes, number } me gusta',
+        'logout': 'Salir',
+        'english': 'Inglés',
+        'spanish': 'Español',
+        'signup.subheading': 'Regístrate para ver fotos y videos de tus amigos.',
+        'signup.facebook': 'Iniciar sesión con Facebook',
+        'or': "O",
+        'email': 'Número de celular o correo electrónico',
+        'username': 'Nombre de usuario',
+        'fullname': 'Nombre completo',
+        'password': 'Contraseña',
+        'signup.call-to-action': 'Regístrate',
+        'signup.have-account': '¿Tienes una cuenta?',
+        'signin.email': 'Telefono, Usuario o correo electronico',
+        'signin': 'Iniciar sesión',
+        'recover': '¿Olvidaste tu Contraseña?',
+        'signin.not-have-account': '¿No tienes una cuenta?',
+        'signup': 'Regístrate',
+        'download': 'Descargar aplicación',
+        'language': 'Idioma'
+      }

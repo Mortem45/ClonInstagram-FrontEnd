@@ -259,6 +259,9 @@ body, button, input, textarea {
 .contenedor-general{
     min-height: 100%;
     overflow: hidden;
+   @include maxtelefono(){
+       height: 850px;
+   }
 }
 
 .contenedor-main{
@@ -287,6 +290,9 @@ body, button, input, textarea {
     height: 618px;
     margin-left: -35px;
     margin-right: -15px;
+    @include maxtelefono(){
+        display: none;
+    }
 }
 
 .div-imagen {
@@ -321,6 +327,7 @@ body, button, input, textarea {
     border-radius: 1px;
     margin: 0 0 10px;
     padding: 10px 0;
+    width: 350px;
 }
 
 // titulo/logo
@@ -918,4 +925,4 @@ a, a:visited {
     letter-spacing: .2px;
 }
 
-
+    

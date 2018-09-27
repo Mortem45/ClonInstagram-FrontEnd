@@ -1,18 +1,7 @@
-const yo = require('yo-yo');
-
-if(!window.Intl){
-    window.Intl = require('intl');
-    require('intl/locale-data/jsonp/en-US.js');
-    require('intl/locale-data/jsonp/es.js');
-}
-
-const IntlRelativeFormat = window.IntlRelativeFormat = require('intl-relativeformat');
-
-require('intl-relativeformat/dist/locale-data/en.js');
-require('intl-relativeformat/dist/locale-data/es.js');
+const yo = require('yo-yo'),
+    translate =require('../translate');
 
 
-let rf = new IntlRelativeFormat('es');
 module.exports = function postCard(post) {
     var el;
 
@@ -73,13 +62,13 @@ module.exports = function postCard(post) {
             <!-- me gustas -->
             <section class="EDfFK ygqzn">
                 <div class="HbPOm y9v3U">
-                    <a class="zV_Nj" href="/p/BoH8IsQD7pS/liked_by/"><span>${post.likes}</span> Me gusta</a>
+                    <a class="zV_Nj" href="/p/BoH8IsQD7pS/liked_by/"><span>${translate.message('likes' , {likes: post.likes})}</span></a>
                 </div>
             </section>
 
             <div class="k_Q0X NnvRN">
                 <a class="c-Yi7" href="/p/BoKkK8tnSCB/">
-                    <time class="_1o9PC Nzb55" datetime="" title="">${rf.format(post.createdAt)}</time>
+                    <time class="_1o9PC Nzb55" datetime="" title="">${translate.date.format(post.createdAt)}</time>
                 </a>
             </div>
 

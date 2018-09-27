@@ -1,28 +1,28 @@
-const yo = require('yo-yo');
-let landing = require('../landing');
+const yo = require('yo-yo'),
+     landing = require('../landing'),
+     translate = require('../translate');
 
 let signupForm = yo`<div class="contenedor-forms ">
 <div class="signup-box ">
     <h1 class=" titulo  coreSpriteLoggedOutWordmark">Instagram</h1>
     <div class="cont_form-signup">
         <form class="form-signup" method="post">
-            <h2 class="slogan ">Regístrate para ver fotos y videos de tus amigos.</h2>
+            <h2 class="slogan ">${translate.message('signup.subheading')}</h2>
             <span class=" span-btn">
                 <button class="botones  color-btns  KUBKM  cursor ">
-                    <span class="coreSpriteFacebookIconInverted det-btn"></span>Iniciar
-                    sesión con Facebook</button>
+                    <span class="coreSpriteFacebookIconInverted det-btn"></span>${translate.message('signup.facebook')}</button>
             </span>
             <div class="divform ">
                 <div class="linea"></div>
-                <div class="letdiv">o</div>
+                <div class="letdiv">${translate.message('or')}</div>
                 <div class="linea"></div>
             </div>
             <div class="cont-input">
                 <div class="cont2-input   ">
                     <div class="cont3-input ">
-                        <input class=" input-signup" id="email-tel" aria-label="Número de celular o correo electrónico"
+                        <input class=" input-signup" id="email-tel" aria-label="${translate.message('email')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="tel" name="emailOrPhone" type="text" placeholder="Número de celular o correo electrónico">
+                            autocomplete="tel" name="emailOrPhone" type="text" placeholder="${translate.message('email')}">
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -30,9 +30,9 @@ let signupForm = yo`<div class="contenedor-forms ">
             <div class="cont-input">
                 <div class="cont2-input   ">
                     <div class="cont3-input ">
-                        <input class=" input-signup " id="name" aria-label="Nombre completo"
+                        <input class=" input-signup " id="name" aria-label="${translate.message('fullname')}"
                             aria-required="false" autocapitalize="sentences" autocorrect="off" name="fullName"
-                            type="text" placeholder="Nombre completo">
+                            type="text" placeholder="${translate.message('fullname')}">
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -40,9 +40,9 @@ let signupForm = yo`<div class="contenedor-forms ">
             <div class="cont-input">
                 <div class="cont2-input   ">
                     <div class="cont3-input ">
-                            <input class=" input-signup    " id="username"
-                            aria-label="Nombre de usuario" aria-required="true" autocapitalize="off"
-                            autocorrect="off" maxlength="30" name="username" type="text" placeholder="Nombre de usuario">
+                            <input class=" input-signup" id="username"
+                            aria-label="${translate.message('username')}" aria-required="true" autocapitalize="off"
+                            autocorrect="off" maxlength="30" name="username" type="text" placeholder="${translate.message('username')}">
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -51,9 +51,9 @@ let signupForm = yo`<div class="contenedor-forms ">
                 <div class="cont2-input   ">
                     <div class="cont3-input ">
                         <input
-                            class=" input-signup    " id="password" aria-label="Contraseña"
+                            class=" input-signup    " id="password" aria-label="${translate.message('password')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="new-password" name="password" type="password" value="" placeholder="Contraseña">
+                            autocomplete="new-password" name="password" type="password" value="" placeholder="${translate.message('password')}">
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -61,28 +61,28 @@ let signupForm = yo`<div class="contenedor-forms ">
             
             <div>
                 <span class=" span-btn">
-                    <button class="botones  color-btns KUBKM cursor ">Registrarte</button>
+                    <button class="botones  color-btns KUBKM cursor ">${translate.message('signup.call-to-action')}</button>
                 </span>
             </div>
-            <p class="ter_y_cond">Al registrarte, aceptas nuestras <a target="_blank" href="">Condiciones</a>,
+            <p class="ter_y_cond">
+            Al registrarte, aceptas nuestras <a target="_blank" href="">Condiciones</a>,
                 la <a target="_blank" href="">Política de datos</a> y la
                 <a target="_blank" href="">Política de cookies</a>.</p>
         </form>
     </div>
 </div>
 <div class="login-box">
-    <p class="texto-login">¿Tienes una cuenta?
-        <a href="/signin">Inicia sesión</a>
+    <p class="texto-login">${translate.message('signup.have-account')}
+        <a href="/signin">${translate.message('signin')}</a>
     </p>
 </div>
 <div class="">
-    <p class="texto-descarga">Descargar aplicación</p>
+    <p class="texto-descarga">${translate.message('download')}</p>
     <div class="contenedor-logos-tiendas">
         <a class="a-descargas" href="">
             <img class="logos-tienda" alt="Disponible en App Store" src="appStore.png">
         </a>
         <a class="a-descargas" href="">
-
             <img class="logos-tienda" alt="Disponible en Google Play" src="playStore.png">
         </a>
     </div>
