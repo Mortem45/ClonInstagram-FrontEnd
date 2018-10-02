@@ -21,5 +21,7 @@ module.exports = {
     'signin.not-have-account': 'Don\'t have an account?',
     'signup': 'Sign up',
     'download': 'Get the app.',
-    'language': 'Language'
+    'language': 'Language',
+    'search' :'Search',
+    'comment': 'Add a comment...'
 }

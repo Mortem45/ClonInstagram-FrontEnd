@@ -18,5 +18,7 @@ module.exports = {
         'signin.not-have-account': '¿No tienes una cuenta?',
         'signup': 'Regístrate',
         'download': 'Descargar aplicación',
-        'language': 'Idioma'
+        'language': 'Idioma',
+        'search' :'Buscar',
+        'comment': 'Agrega un comentario'
       }

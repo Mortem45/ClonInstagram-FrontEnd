@@ -291,9 +291,6 @@ body, button, input, textarea {
 .contenedor-general {
   min-height: 100%;
   overflow: hidden; }
-  @media only screen and (max-width: 480px) {
-    .contenedor-general {
-      height: 850px; } }
 
 .contenedor-main {
   -webkit-box-flex: 1;
@@ -319,6 +316,9 @@ body, button, input, textarea {
   max-width: 935px;
   padding-bottom: 44px;
   widows: 100%; }
+  @media only screen and (min-width: 1024px) {
+    .contenedor {
+      height: 850px; } }
 
 .contenedor-imagen {
   -ms-flex-item-align: center;
@@ -465,7 +465,8 @@ body, button, input, textarea {
 /* inputs */
 /* div contenedor input */
 .cont-input {
-  margin: 0 40px 6px; }
+  margin: 0 40px 6px;
+  max-height: 40px; }
 
 /* segundo div contenedor */
 .input-signup, .cont2-input {
@@ -489,7 +490,8 @@ body, button, input, textarea {
   font-size: 14px;
   position: relative;
   width: 100%;
-  border: 1px solid #efefef; }
+  border: 1px solid #efefef;
+  max-height: 40px; }
 
 .cont3-input {
   height: 36px;
@@ -1011,3 +1013,34 @@ a, a:visited {
 .c-Yi7 ._1o9PC {
   font-size: 10px;
   letter-spacing: .2px; }
+
+.mlrQa {
+  left: 11px;
+  position: absolute;
+  top: 9px;
+  z-index: 2; }
+
+.jLwSh {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+
+.aIYm8 {
+  z-index: 3;
+  right: 5px;
+  top: 4px; }
+
+.Ktjgk, .VWmGw, .aIYm8 {
+  position: absolute; }
+
+.coreSpriteSearchClear {
+  background-position: -381px -358px;
+  height: 20px;
+  width: 20px; }
+
+.eyXLr {
+  display: inline;
+  left: -5px; }

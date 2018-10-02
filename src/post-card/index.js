@@ -76,7 +76,7 @@ module.exports = function postCard(post) {
             <section class="sH9wk  _JgwE ">
                 <div class="RxpZH">
                     <form class="X7cDz">
-                        <textarea aria-label="Agrega un comentario..." placeholder="Agrega un comentario..." class="Ypffh"
+                        <textarea aria-label="Agrega un comentario..." placeholder="${translate.message('comment')}" class="Ypffh"
                             autocomplete="off" autocorrect="off"></textarea>
                     </form>
                 </div>
@@ -100,9 +100,6 @@ module.exports = function postCard(post) {
         yo.update(el, newEl);
         return false;
     }
-
-
-
     el = render(post);
     return el;
 }

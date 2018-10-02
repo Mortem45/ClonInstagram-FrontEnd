@@ -259,9 +259,8 @@ body, button, input, textarea {
 .contenedor-general{
     min-height: 100%;
     overflow: hidden;
-   @include maxtelefono(){
-       height: 850px;
-   }
+    
+   
 }
 
 .contenedor-main{
@@ -271,6 +270,9 @@ body, button, input, textarea {
 }
 
 .contenedor{
+    @include desktop(){
+        height: 850px;
+    }
     flex-direction: row;
     flex-grow: 1;
     justify-content: center;
@@ -416,6 +418,7 @@ body, button, input, textarea {
 /* div contenedor input */
 .cont-input {
     margin: 0 40px 6px;
+    max-height: 40px;
 }
 /* segundo div contenedor */
 .input-signup, .cont2-input {
@@ -433,6 +436,7 @@ body, button, input, textarea {
     position: relative;
     width: 100%;
     border: 1px solid $color-linea-div;
+    max-height: 40px;
 }
 
 .cont3-input {
@@ -904,6 +908,7 @@ a, a:visited {
 }
 
 
+
 .EtaWk, .NnvRN {
     margin-bottom: 4px;
 }
@@ -925,4 +930,42 @@ a, a:visited {
     letter-spacing: .2px;
 }
 
-    
+
+.mlrQa {
+    left: 11px;
+    position: absolute;
+    top: 9px;
+    z-index: 2;
+}
+
+
+.jLwSh {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.aIYm8 {
+    z-index: 3;
+    right: 5px;
+    top: 4px;
+}
+
+.Ktjgk, .VWmGw, .aIYm8 {
+    position: absolute;
+}
+
+.coreSpriteSearchClear {
+    background-position:-381px -358px;
+    height: 20px;
+    width: 20px;
+}
+.eyXLr {
+    display: inline;
+    left: -5px;
+}
+
+
