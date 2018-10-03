@@ -5,7 +5,6 @@ const page = require('page'),
       
 page('/', loadPosts, function(ctx ,next){
     let main = document.getElementById('main-container');
-    
     empty(main).appendChild(template(ctx.posts));
 })
 
@@ -14,7 +13,6 @@ function loadPosts(ctx, next) {
         .get('/api/posts')
         .end(function (err, res) {
             if (err) return console.log(err);
-            
             ctx.posts = res.body;
             next();
         })

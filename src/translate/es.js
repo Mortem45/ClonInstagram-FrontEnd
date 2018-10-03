@@ -20,5 +20,6 @@ module.exports = {
         'download': 'Descargar aplicación',
         'language': 'Idioma',
         'search' :'Buscar',
-        'comment': 'Agrega un comentario'
+        'comment': 'Agrega un comentario',
+        'share' : 'Compartir'
       }

@@ -1,7 +1,7 @@
 const yo = require('yo-yo');
 
 module.exports = function landing(box) {
-    return yo` <section class="contenedor-general" id="main-container">
+    return yo` 
     <main class="contenedor-main ">
         <article class="contenedor">
             <div class="contenedor-imagen ">
@@ -11,6 +11,5 @@ module.exports = function landing(box) {
             </div>
             ${box}
         </article>
-    </main>
-    </section>`
+    </main>`
 }

@@ -3,7 +3,7 @@ const yo = require('yo-yo'),
 
 
 module.exports = function postCard(post) {
-    var el;
+    let el;
 
     function render(post) {
         return yo `<article class="_8Rm4L M9sTE  L_LMM SgTZ1   ">
@@ -82,7 +82,6 @@ module.exports = function postCard(post) {
                 </div>
             </section>
         </div>
-
         <div class="MEAGs">
             <button class="oF4XW dCJp8" >
                 <span class="glyphsSpriteMore_horizontal__outline__24__grey_9 u-__7" aria-label="Más opciones">

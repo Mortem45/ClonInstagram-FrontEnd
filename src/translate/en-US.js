@@ -23,5 +23,6 @@ module.exports = {
     'download': 'Get the app.',
     'language': 'Language',
     'search' :'Search',
-    'comment': 'Add a comment...'
+    'comment': 'Add a comment...',
+    'share': 'Share'
 }

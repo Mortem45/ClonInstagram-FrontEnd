@@ -969,3 +969,37 @@ a, a:visited {
 }
 
 
+.publicar{
+        flex: 0 1 auto;
+        min-width: 125px;
+        width: 100px;
+}
+
+.btn-public{
+    background: $color-letras; 
+    color: $color-texto-form ;
+    cursor: pointer;
+}
+
+.modal-overlay{
+    z-index: 4001;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4000;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.hideShare{
+    display: none;
+}
+.showShare{
+    display: block;
+}
+
+.form-upload{
+    
+}
