@@ -2,16 +2,41 @@ const yo = require('yo-yo'),
     translate =require('../translate');
 
 module.exports = function layout(content){
-            return yo`<span id="react-root">
+            let el = yo`<span id="react-root">
             <section class="contenedor-general">
                 <main class="contenedor-main" role="main">
                         ${content}
-                        <div class="modal-overlay" id="modal-overlay">
-                            <form enctype="multipart/form-data" class="form-upload">
-                                <div>
+                        <div class="modal-overlay" id="modaloverlay">
+                            <form enctype="multipart/form-data" class="form-upload" id="formupload">
+                                <div class="file-upload publicar _0aCwM XrOey">
+                                    <div class="pbgfb Di7vw btn-public" role="button" >
+                                        <div class="eyXLr wUAXj ">
+                                            <span class="_6RZXI "></span>
+                                            <input name="picture" id="file" type="file" class="upload" value="">
+                                            <span class="TqC_a">${translate.message('upload')}</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <input type="file">
-                                <input type="submit">
+                                <div class="options">
+                                    <div class="file-upload publicar _0aCwM XrOey">
+                                        <div class="pbgfb Di7vw btn-public"  >
+                                            <div class="eyXLr wUAXj ">
+                                                <span class="_6RZXI "></span>
+                                                    <button name="btnUpload" type="submit" class="btnUpload"></button>
+                                                <span class="TqC_a">${translate.message('share')}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="file-upload publicar _0aCwM XrOey" onclick="${showShare}">
+                                        <div class="pbgfb Di7vw btn-public"  >
+                                            <div class="eyXLr wUAXj ">
+                                                <span class="_6RZXI "></span>
+                                                <button name="btnUpload" type="button" class="btnCancel"></button>
+                                                <span class="TqC_a">${translate.message('cancel')}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
                             </form> 
                         </div>
                 </main>
@@ -29,8 +54,8 @@ module.exports = function layout(content){
                                 <div class="LWmhU _0aCwM">
                                     <div class="pbgfb Di7vw " role="button" tabindex="0">
                                         <div class="eyXLr wUAXj ">
-                                            <span class="_6RZXI coreSpriteSearchIcon">
-                                            </span><span class="TqC_a">${translate.message('search')}</span>
+                                            <span class="_6RZXI coreSpriteSearchIcon"></span>
+                                            <span class="TqC_a">${translate.message('search')}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -40,14 +65,14 @@ module.exports = function layout(content){
                                             <a class="Szr5J kIKUG coreSpriteDesktopNavExplore" href="explore/">Buscar personas</a>
                                         </div>
                                         <div class="XrOey">
-                                            <a href="" class="_0ZPOP kIKUG coreSpriteDesktopNavActivity  "><span class="Szr5J">Feed de actividades</span></a>
+                                            <a href="" class="_0ZPOP kIKUG coreSpriteDesktopNavActivity"><span class="Szr5J">Feed de actividades</span></a>
                                         </div>
                                         <div class="XrOey">
                                             <a class="Szr5J kIKUG coreSpriteDesktopNavProfile" href="">Perfil</a>
                                         </div>
                                         
-                                        <div class="publicar _0aCwM XrOey" id="modalOverlay">
-                                            <div class="pbgfb Di7vw btn-public" role="button" >
+                                        <div class="publicar _0aCwM XrOey" onclick="${showShare}">
+                                            <div class="pbgfb Di7vw btn-public" " >
                                                 <div class="eyXLr wUAXj ">
                                                     <span class="_6RZXI "></span>
                                                     <span class="TqC_a">${translate.message('share')}</span>
@@ -62,7 +87,15 @@ module.exports = function layout(content){
                     </div>
                 </nav>
             </section>
-            </span>` 
+            </span>`; 
+
+            function showShare() {
+                document.getElementById('modaloverlay').classList.toggle('showShare');
+                document.getElementById('body').classList.toggle('hidden');
+                document.getElementById('formupload').reset();
+            }
+
+            return el;
         }
 
 

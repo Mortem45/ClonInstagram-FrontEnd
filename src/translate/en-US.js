@@ -24,5 +24,7 @@ module.exports = {
     'language': 'Language',
     'search' :'Search',
     'comment': 'Add a comment...',
-    'share': 'Share'
+    'share': 'Share',
+    'upload': 'Upload',
+    'cancel': 'Cancel'
 }

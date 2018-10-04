@@ -21,5 +21,8 @@ module.exports = {
         'language': 'Idioma',
         'search' :'Buscar',
         'comment': 'Agrega un comentario',
-        'share' : 'Compartir'
+        'share' : 'Compartir',
+        'upload': 'Subir',
+        'cancel': 'Cancelar'
+
       }

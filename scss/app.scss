@@ -4,7 +4,9 @@
 html {
     @include box-sizing(border-box);
 }
-._3Laht, .o64aR {
+
+._3Laht,
+.o64aR {
     background-color: $fondo;
 }
 
@@ -14,7 +16,8 @@ html {
     order: 2;
 }
 
-.gW4DF, .jLuN9 {
+.gW4DF,
+.jLuN9 {
     order: 0;
 }
 
@@ -23,7 +26,8 @@ html {
     order: 2;
 }
 
-.MWDvN, .aUCRo {
+.MWDvN,
+.aUCRo {
     height: 52px;
 }
 
@@ -40,7 +44,7 @@ html {
 
 .barra-naveg {
     background-color: $fondo-contenido;
-    border-bottom: 1px solid rgba(0,0,0,.0975);
+    border-bottom: 1px solid rgba(0, 0, 0, .0975);
     position: fixed;
     top: 0;
     width: 100%;
@@ -49,17 +53,22 @@ html {
     height: 77px;
 }
 
-.MWDvN, .barra-naveg, .aUCRo {
+.MWDvN,
+.barra-naveg,
+.aUCRo {
     align-items: center;
 }
+
 .buoMu {
     height: 52px;
     padding: 0 40px;
 }
+
 .oJZym {
     flex: 1 9999 0%;
     min-width: 40px;
 }
+
 .aU2HW {
     margin-right: 12px;
     margin-top: -4px;
@@ -67,16 +76,19 @@ html {
     overflow: hidden;
     position: relative;
 }
+
 ._7mese {
     opacity: 1;
     transition: opacity .2s ease-in-out;
 }
+
 .Szr5J {
     display: block;
     overflow: hidden;
     text-indent: 110%;
     white-space: nowrap;
 }
+
 .coreSpriteDesktopNavLogoAndWordmark {
     background-repeat: no-repeat;
     background-position: -98px -203px;
@@ -89,32 +101,41 @@ html {
     position: absolute;
     transition: opacity .2s ease-in-out;
 }
-.buoMu ._7mese, .efNlB {
+
+.buoMu ._7mese,
+.efNlB {
     pointer-events: none;
     opacity: 0;
 }
+
 .coreSpriteGlyphBlack {
     background-position: -458px -160px;
     height: 30px;
     width: 30px;
 }
-.coreSpriteGallery, .coreSpriteGlyphBlack {
+
+.coreSpriteGallery,
+.coreSpriteGlyphBlack {
     background-repeat: no-repeat;
     background-position: -458px -288px;
     height: 24px;
     width: 24px;
 }
+
 .LWmhU {
     flex: 0 1 auto;
     min-width: 125px;
     width: 215px;
 }
+
 ._0aCwM {
     height: 28px;
 }
+
 .x3qfX:placeholder-shown {
     font-size: 16px;
 }
+
 .XTCLo {
     border: solid 1px #dbdbdb;
     border-radius: 3px;
@@ -123,16 +144,20 @@ html {
     padding: 3px 10px 3px 26px;
     z-index: 2;
 }
-.XTCLo, .pbgfb {
+
+.XTCLo,
+.pbgfb {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
 }
+
 .Di7vw {
     background: $fondo;
     border: solid 1px #dbdbdb;
     justify-content: center;
 }
+
 .pbgfb {
     border-radius: 3px;
     color: $color-letras;
@@ -146,17 +171,22 @@ html {
     top: 0;
     z-index: 2;
 }
+
 .eyXLr {
     display: inline;
     left: -5px;
 }
+
 ._6RZXI {
     margin-right: 6px;
     vertical-align: baseline;
 }
-.TqC_a, ._6RZXI {
+
+.TqC_a,
+._6RZXI {
     display: inline-block;
 }
+
 .TqC_a {
     max-width: 140px;
     overflow: hidden;
@@ -164,7 +194,9 @@ html {
     vertical-align: bottom;
     white-space: nowrap;
 }
-.coreSpriteSearchIcon, .coreSpriteSensitivityIcon {
+
+.coreSpriteSearchIcon,
+.coreSpriteSensitivityIcon {
     background-repeat: no-repeat;
     background-position: -445px -409px;
     height: 10px;
@@ -181,14 +213,17 @@ html {
     flex: 1 0 0%;
     justify-content: flex-end;
 }
-.ZcHy5, ._47KiJ {
+
+.ZcHy5,
+._47KiJ {
     display: flex;
     flex-direction: row;
     padding-left: 24px;
     white-space: nowrap;
 }
 
-.coreSpriteDesktopNavDirect, .coreSpriteDesktopNavExplore {
+.coreSpriteDesktopNavDirect,
+.coreSpriteDesktopNavExplore {
     background-repeat: no-repeat;
     background-position: -458px -392px;
     height: 24px;
@@ -198,9 +233,11 @@ html {
 .coreSpriteDesktopNavExplore {
     background-position: -261px -357px;
 }
+
 .XrOey:not(:first-child) {
     margin-left: 30px;
 }
+
 ._0ZPOP {
     background-color: transparent;
     border: 0;
@@ -208,12 +245,14 @@ html {
     color: transparent;
     position: relative;
 }
+
 .coreSpriteDesktopNavActivity {
     background-repeat: no-repeat;
     background-position: -183px -357px;
     height: 24px;
     width: 24px;
 }
+
 .coreSpriteDesktopNavProfile {
     background-repeat: no-repeat;
     background-position: -432px -316px;
@@ -229,16 +268,18 @@ html {
     position: relative;
     width: 100%;
 }
+
 .j9XKR {
     display: flex;
     flex-flow: row nowrap;
     // max-width: 935px;
 }
+
 //////////////////////////////////////////////////////////////////
 *,
 *:after,
 *:before {
-  @include box-sizing(inherit);
+    @include box-sizing(inherit);
 }
 
 body {
@@ -248,31 +289,40 @@ body {
 #react-root {
     z-index: 0;
 }
-body, button, input, textarea {
-    font-family: Roboto,Helvetica,Arial,sans-serif;
+
+body,
+button,
+input,
+textarea {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
 }
-#react-root, body, html {
+
+#react-root,
+body,
+html {
     height: 100%;
 }
-.contenedor-general{
+
+.contenedor-general {
     min-height: 100%;
     overflow: hidden;
-    
-   
+
+
 }
 
-.contenedor-main{
+.contenedor-main {
     flex-grow: 1;
     order: 4;
     background-color: $fondo;
 }
 
-.contenedor{
-    @include desktop(){
+.contenedor {
+    @include desktop() {
         height: 850px;
     }
+
     flex-direction: row;
     flex-grow: 1;
     justify-content: center;
@@ -292,7 +342,8 @@ body, button, input, textarea {
     height: 618px;
     margin-left: -35px;
     margin-right: -15px;
-    @include maxtelefono(){
+
+    @include maxtelefono() {
         display: none;
     }
 }
@@ -323,7 +374,8 @@ body, button, input, textarea {
     max-width: 350px;
 }
 
-.signup-box, .login-box {
+.signup-box,
+.login-box {
     background-color: $fondo-contenido;
     border: 1px solid $color-bordes;
     border-radius: 1px;
@@ -341,9 +393,11 @@ body, button, input, textarea {
     text-indent: 110%;
     white-space: nowrap;
 }
+
 .cont_form-signup {
     margin-bottom: 20px;
 }
+
 /* form */
 .form-signup {
     display: flex;
@@ -366,6 +420,7 @@ body, button, input, textarea {
     display: block;
     position: relative;
 }
+
 /* botones */
 .botones {
     border-radius: 3px;
@@ -395,6 +450,7 @@ body, button, input, textarea {
     flex-direction: row;
     margin: 10px 40px 18px;
 }
+
 .linea {
     flex-grow: 1;
     flex-shrink: 1;
@@ -403,6 +459,7 @@ body, button, input, textarea {
     position: relative;
     top: .45em;
 }
+
 /* o entre lineas */
 .letdiv {
     color: $color-letras;
@@ -414,22 +471,25 @@ body, button, input, textarea {
     margin: 0 18px;
     text-transform: uppercase;
 }
+
 /* inputs */
 /* div contenedor input */
 .cont-input {
     margin: 0 40px 6px;
     max-height: 40px;
 }
+
 /* segundo div contenedor */
-.input-signup, .cont2-input {
-    background: $fondo ;
+.input-signup,
+.cont2-input {
+    background: $fondo;
 }
 
 .cont2-input {
     align-items: center;
     border-radius: 3px;
     box-sizing: border-box;
-    color: $color-texto-form ;
+    color: $color-texto-form;
     display: flex;
     flex-direction: row;
     font-size: 14px;
@@ -494,7 +554,7 @@ body, button, input, textarea {
     text-align: center;
 }
 
-.ter_y_cond a{
+.ter_y_cond a {
     color: $color-letras;
     font-weight: 600;
 }
@@ -534,29 +594,161 @@ body, button, input, textarea {
     height: 40px;
 }
 
-.texto-login a{
+.texto-login a {
     color: $color-botones;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
 
-.coreSpriteLoggedOutWordmark, .coreSpriteMobileNavDirect {
+.coreSpriteLoggedOutWordmark,
+.coreSpriteMobileNavDirect {
     background-repeat: no-repeat;
     background-position: -98px -150px;
     height: 51px;
     width: 175px;
 }
 
-.coreSpriteActivityHeart, .coreSpriteAddText, .coreSpriteAppIcon, .coreSpriteAppStoreButton, .coreSpriteApproveLarge, .coreSpriteBoomerang, .coreSpriteCall, .coreSpriteCheck, .coreSpriteChevronDark, .coreSpriteChevronDownGrey, .coreSpriteChevronRight, .coreSpriteCi, .coreSpriteClose, .coreSpriteCloseLight, .coreSpriteCommentLike, .coreSpriteCommentLikeActive, .coreSpriteDesktopNavActivity, .coreSpriteDesktopNavDirect, .coreSpriteDesktopNavExplore, .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile, .coreSpriteDesktopPhotoGrid, .coreSpriteDesktopPhotoGridActive, .coreSpriteDesktopProfileIGTV, .coreSpriteDesktopProfileIGTVActive, .coreSpriteDesktopProfileSave, .coreSpriteDesktopProfileSaveActive, .coreSpriteDesktopProfileTagged, .coreSpriteDesktopProfileTaggedActive, .coreSpriteDirectHeart, .coreSpriteDismissLarge, .coreSpriteDismissSmall, .coreSpriteDownload, .coreSpriteDropdownArrowBlue5, .coreSpriteDropdownArrowBlue6, .coreSpriteDropdownArrowGrey9, .coreSpriteDropdownArrowWhite, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted, .coreSpriteFbGlyph, .coreSpriteGallery, .coreSpriteGlyphBlack, .coreSpriteGlyphGradient, .coreSpriteGlyphWhite, .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartSmall, .coreSpriteHyperlapse, .coreSpriteIgLiteHalfsheetInstagramLogo, .coreSpriteInfo, .coreSpriteInputAccepted, .coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteKeyhole, .coreSpriteLeftChevron, .coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart, .coreSpriteLocation, .coreSpriteLocationActive, .coreSpriteLock, .coreSpriteLockLarge, .coreSpriteLockSmall, .coreSpriteLoggedOutGenericUpsell, .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavDirect, .coreSpriteMobileNavTypeLogo, .coreSpriteNavBack, .coreSpriteNotificationLeftChevron, .coreSpriteNotificationRightChevron, .coreSpriteNullProfile, .coreSpriteOptionsEllipsis, .coreSpriteOptionsEllipsisLight, .coreSpritePagingChevron, .coreSpritePlayIconSmall, .coreSpritePrivateLock, .coreSpriteProfileCamera, .coreSpriteReload, .coreSpriteRightChevron, .coreSpriteRightPaginationArrow, .coreSpriteSaveNull, .coreSpriteSaveStory, .coreSpriteSearchClear, .coreSpriteSearchIcon, .coreSpriteSensitivityIcon, .coreSpriteSensitivityIconSmall, .coreSpriteSidecarIconLarge, .coreSpriteSidecarIconSmall, .coreSpriteSpeechBubbleSmall, .coreSpriteSpinsta, .coreSpriteSpinstaNux, .coreSpriteSpinstaStory, .coreSpriteStar, .coreSpriteStoryCreation, .coreSpriteStoryCreationAlt, .coreSpriteStoryRing, .coreSpriteStoryViewCount, .coreSpriteTaggedNull, .coreSpriteUnreadComments, .coreSpriteUnreadLikes, .coreSpriteUnreadRelationships, .coreSpriteUnreadUsertags, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge, .coreSpriteVerifiedBadgeSmall, .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall, .coreSpriteVideoNux, .coreSpriteViewCount, .coreSpriteWindowsStoreButton {
+.coreSpriteActivityHeart,
+.coreSpriteAddText,
+.coreSpriteAppIcon,
+.coreSpriteAppStoreButton,
+.coreSpriteApproveLarge,
+.coreSpriteBoomerang,
+.coreSpriteCall,
+.coreSpriteCheck,
+.coreSpriteChevronDark,
+.coreSpriteChevronDownGrey,
+.coreSpriteChevronRight,
+.coreSpriteCi,
+.coreSpriteClose,
+.coreSpriteCloseLight,
+.coreSpriteCommentLike,
+.coreSpriteCommentLikeActive,
+.coreSpriteDesktopNavActivity,
+.coreSpriteDesktopNavDirect,
+.coreSpriteDesktopNavExplore,
+.coreSpriteDesktopNavLogoAndWordmark,
+.coreSpriteDesktopNavProfile,
+.coreSpriteDesktopPhotoGrid,
+.coreSpriteDesktopPhotoGridActive,
+.coreSpriteDesktopProfileIGTV,
+.coreSpriteDesktopProfileIGTVActive,
+.coreSpriteDesktopProfileSave,
+.coreSpriteDesktopProfileSaveActive,
+.coreSpriteDesktopProfileTagged,
+.coreSpriteDesktopProfileTaggedActive,
+.coreSpriteDirectHeart,
+.coreSpriteDismissLarge,
+.coreSpriteDismissSmall,
+.coreSpriteDownload,
+.coreSpriteDropdownArrowBlue5,
+.coreSpriteDropdownArrowBlue6,
+.coreSpriteDropdownArrowGrey9,
+.coreSpriteDropdownArrowWhite,
+.coreSpriteFacebookIcon,
+.coreSpriteFacebookIconInverted,
+.coreSpriteFbGlyph,
+.coreSpriteGallery,
+.coreSpriteGlyphBlack,
+.coreSpriteGlyphGradient,
+.coreSpriteGlyphWhite,
+.coreSpriteGooglePlayButton,
+.coreSpriteHashtag,
+.coreSpriteHeartSmall,
+.coreSpriteHyperlapse,
+.coreSpriteIgLiteHalfsheetInstagramLogo,
+.coreSpriteInfo,
+.coreSpriteInputAccepted,
+.coreSpriteInputError,
+.coreSpriteInputRefresh,
+.coreSpriteKeyhole,
+.coreSpriteLeftChevron,
+.coreSpriteLeftPaginationArrow,
+.coreSpriteLikeAnimationHeart,
+.coreSpriteLocation,
+.coreSpriteLocationActive,
+.coreSpriteLock,
+.coreSpriteLockLarge,
+.coreSpriteLockSmall,
+.coreSpriteLoggedOutGenericUpsell,
+.coreSpriteLoggedOutWordmark,
+.coreSpriteMobileNavDirect,
+.coreSpriteMobileNavTypeLogo,
+.coreSpriteNavBack,
+.coreSpriteNotificationLeftChevron,
+.coreSpriteNotificationRightChevron,
+.coreSpriteNullProfile,
+.coreSpriteOptionsEllipsis,
+.coreSpriteOptionsEllipsisLight,
+.coreSpritePagingChevron,
+.coreSpritePlayIconSmall,
+.coreSpritePrivateLock,
+.coreSpriteProfileCamera,
+.coreSpriteReload,
+.coreSpriteRightChevron,
+.coreSpriteRightPaginationArrow,
+.coreSpriteSaveNull,
+.coreSpriteSaveStory,
+.coreSpriteSearchClear,
+.coreSpriteSearchIcon,
+.coreSpriteSensitivityIcon,
+.coreSpriteSensitivityIconSmall,
+.coreSpriteSidecarIconLarge,
+.coreSpriteSidecarIconSmall,
+.coreSpriteSpeechBubbleSmall,
+.coreSpriteSpinsta,
+.coreSpriteSpinstaNux,
+.coreSpriteSpinstaStory,
+.coreSpriteStar,
+.coreSpriteStoryCreation,
+.coreSpriteStoryCreationAlt,
+.coreSpriteStoryRing,
+.coreSpriteStoryViewCount,
+.coreSpriteTaggedNull,
+.coreSpriteUnreadComments,
+.coreSpriteUnreadLikes,
+.coreSpriteUnreadRelationships,
+.coreSpriteUnreadUsertags,
+.coreSpriteUserTagIndicator,
+.coreSpriteVerifiedBadge,
+.coreSpriteVerifiedBadgeSmall,
+.coreSpriteVideoIconLarge,
+.coreSpriteVideoIconSmall,
+.coreSpriteVideoNux,
+.coreSpriteViewCount,
+.coreSpriteWindowsStoreButton {
     background-image: url(logos-e-iconos.png);
 }
 
 
-a, article, b, body, canvas, div, figure, footer, form, h1, h2, h3, h4, h5, h6,
-header, html, i img, label,menu, nav, p, section, 
-span,  strong {
+a,
+article,
+b,
+body,
+canvas,
+div,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i img,
+label,
+menu,
+nav,
+p,
+section,
+span,
+strong {
     margin: 0;
     padding: 0;
     border: 0;
@@ -564,7 +756,14 @@ span,  strong {
     vertical-align: baseline;
 }
 
-#react-root,article, div, footer, header, main, nav, section {
+#react-root,
+article,
+div,
+footer,
+header,
+main,
+nav,
+section {
     align-items: stretch;
     border: 0 solid #000;
     box-sizing: border-box;
@@ -579,16 +778,26 @@ span,  strong {
 /*********************************************** posts*/
 
 
-.AcVnq, ._8Rm4L {
+.AcVnq,
+._8Rm4L {
     margin-bottom: 60px;
 }
 
-.KQA-S, ._1MzIy, ._3MPWk, ._8Rm4L, .zMhqu {
+.KQA-S,
+._1MzIy,
+._3MPWk,
+._8Rm4L,
+.zMhqu {
     border-radius: 3px;
     border: 1px solid $color-bordes;
 }
 
-.AcVnq, .KQA-S, ._1MzIy, ._3MPWk, ._8Rm4L, .zMhqu {
+.AcVnq,
+.KQA-S,
+._1MzIy,
+._3MPWk,
+._8Rm4L,
+.zMhqu {
     background-color: $fondo-contenido;
     margin-left: -1px;
     margin-right: -1px;
@@ -599,7 +808,7 @@ span,  strong {
 }
 
 .UE9AK {
-    border-bottom: 1px solid  $color-bordes;
+    border-bottom: 1px solid $color-bordes;
 }
 
 .cGcGK {
@@ -615,7 +824,9 @@ span,  strong {
     padding: 16px;
     align-items: center;
 }
-.Ppjfr, .bY2yH {
+
+.Ppjfr,
+.bY2yH {
     flex-direction: row;
 }
 
@@ -628,12 +839,13 @@ span,  strong {
 .CfWVH {
     user-select: none;
 }
+
 .qNELH {
     cursor: pointer;
 }
 
 ._2dbep {
-    background-color: $fondo ;
+    background-color: $fondo;
     border-radius: 50%;
     box-sizing: border-box;
     display: block;
@@ -641,7 +853,9 @@ span,  strong {
     overflow: hidden;
     position: relative;
 }
-a, a:visited {
+
+a,
+a:visited {
     color: #003569;
     text-decoration: none;
 }
@@ -659,6 +873,7 @@ a, a:visited {
     margin-left: 12px;
     overflow: hidden;
 }
+
 .e1e1d {
     align-items: center;
     flex-direction: row;
@@ -666,17 +881,26 @@ a, a:visited {
     overflow: auto;
     flex-grow: 1;
 }
-.e1e1d, .nJAzx, .nJAzx:visited {
+
+.e1e1d,
+.nJAzx,
+.nJAzx:visited {
     flex-shrink: 1;
 }
-.nJAzx, .nJAzx:visited {
+
+.nJAzx,
+.nJAzx:visited {
     color: $color-texto-form;
     flex-grow: 0;
 }
-.e1e1d, .nJAzx, .nJAzx:visited {
+
+.e1e1d,
+.nJAzx,
+.nJAzx:visited {
 
     flex-shrink: 1;
 }
+
 .FPmhX {
     font-weight: 600;
     overflow: hidden;
@@ -693,16 +917,19 @@ a, a:visited {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 .eLAPa {
     background-color: $color-linea-div;
     display: block;
     width: 100%;
 }
+
 .KL4Bh {
     display: block;
     overflow: hidden;
     padding-bottom: 100%;
 }
+
 ._9AhH0 {
     bottom: 0;
     right: 0;
@@ -714,7 +941,9 @@ a, a:visited {
     user-select: none;
     width: 100%;
 }
-.FFVAD, ._9AhH0 {
+
+.FFVAD,
+._9AhH0 {
     left: 0;
     position: absolute;
     top: 0;
@@ -739,7 +968,10 @@ a, a:visited {
 }
 
 
-.CxFbA, ._15y0l, ._5e4p, .wmtNn {
+.CxFbA,
+._15y0l,
+._5e4p,
+.wmtNn {
     display: inline-block;
 }
 
@@ -751,31 +983,41 @@ a, a:visited {
 .ygqzn {
     margin-bottom: 8px;
 }
+
 .EDfFK {
     flex-direction: row;
     justify-content: flex-end;
 }
+
 .HbPOm {
     flex-grow: 1;
     flex-shrink: 1;
 }
-.cqXBL, .cqXBL:visited, .y9v3U {
+
+.cqXBL,
+.cqXBL:visited,
+.y9v3U {
     color: $color-texto-form;
 }
+
 .y9v3U {
     display: block;
 }
 
-.zV_Nj, .zV_Nj:visited {
+.zV_Nj,
+.zV_Nj:visited {
     font-weight: 600;
     color: $color-texto-form;
 }
+
 .L_LMM ._JgwE {
     padding-right: 26px;
 }
+
 ._JgwE {
     margin-top: 4px;
 }
+
 .sH9wk {
     border-top: 1px solid $color-linea-div;
     color: $color-letras;
@@ -791,11 +1033,15 @@ a, a:visited {
     flex-shrink: 1;
     position: relative;
 }
-.X7cDz, .Ypffh {
+
+.X7cDz,
+.Ypffh {
     display: flex;
     flex-grow: 1;
 }
-.X7cDz, .n1LTb .RxpZH {
+
+.X7cDz,
+.n1LTb .RxpZH {
     align-items: center;
 }
 
@@ -811,7 +1057,9 @@ a, a:visited {
     resize: none;
 
 }
-.X7cDz, .Ypffh {
+
+.X7cDz,
+.Ypffh {
     display: flex;
     flex-grow: 1;
 
@@ -823,6 +1071,7 @@ a, a:visited {
     right: 4px;
     top: auto;
 }
+
 .MEAGs {
     height: 60px;
     justify-content: center;
@@ -841,28 +1090,80 @@ a, a:visited {
     min-width: 40px;
     padding: 0;
 }
-.oF4XW, .oF4XW * {
+
+.oF4XW,
+.oF4XW * {
     outline: 0 !important;
 }
 
-.u-__7{
+.u-__7 {
     display: block;
 }
+
 .glyphsSpriteMore_horizontal__outline__24__grey_9 {
     background-position: -26px -123px;
 }
-.glyphsSpriteMore_horizontal__filled__24__grey_0, .glyphsSpriteMore_horizontal__outline__24__grey_9 {
+
+.glyphsSpriteMore_horizontal__filled__24__grey_0,
+.glyphsSpriteMore_horizontal__outline__24__grey_9 {
     background-repeat: no-repeat;
     background-position: 0 -123px;
     height: 24px;
     width: 24px;
 }
-.glyphsSpriteApp_Icon, .glyphsSpriteCamera__outline__24__grey_9, .glyphsSpriteChevron_left__outline__24__grey_9, .glyphsSpriteChevron_right__outline__24__grey_5, .glyphsSpriteCircle_add__outline__24__grey_9, .glyphsSpriteComment__outline__24__grey_9, .glyphsSpriteDelete__outline__24__grey_0, .glyphsSpriteDirect__outline__24__grey_9, .glyphsSpriteFacebook__outline__24__grey_9, .glyphsSpriteHashtag__outline__24__grey_9, .glyphsSpriteHeart__filled__24__grey_9, .glyphsSpriteHeart__filled__24__red_5, .glyphsSpriteHeart__outline__24__grey_9, .glyphsSpriteHome__filled__24__grey_9, .glyphsSpriteHome__outline__24__grey_9, .glyphsSpriteLink__outline__24__grey_9, .glyphsSpriteLocation__outline__24__grey_9, .glyphsSpriteMail__outline__24__grey_9, .glyphsSpriteMobile_nav_type_logo, .glyphsSpriteMore_horizontal__filled__24__grey_0, .glyphsSpriteMore_horizontal__outline__24__grey_9, .glyphsSpriteNew_post__outline__24__grey_9, .glyphsSpritePaging_chevron, .glyphsSpritePhoto_grid__outline__24__blue_5, .glyphsSpritePhoto_grid__outline__24__grey_5, .glyphsSpritePhoto_list__outline__24__blue_5, .glyphsSpritePhoto_list__outline__24__grey_5, .glyphsSpriteSave__filled__24__grey_9, .glyphsSpriteSave__outline__24__blue_5, .glyphsSpriteSave__outline__24__grey_5, .glyphsSpriteSave__outline__24__grey_9, .glyphsSpriteSearch__filled__24__grey_9, .glyphsSpriteSearch__outline__24__grey_9, .glyphsSpriteSettings__outline__24__grey_9, .glyphsSpriteShare__outline__24__grey_9, .glyphsSpriteShare_facebook, .glyphsSpriteShare_messenger, .glyphsSpriteShare_twitter, .glyphsSpriteShare_whatsapp, .glyphsSpriteTag_up__outline__24__blue_5, .glyphsSpriteTag_up__outline__24__grey_5, .glyphsSpriteUser__filled__24__grey_9, .glyphsSpriteUser__outline__24__grey_9, .glyphsSpriteUser_follow__outline__24__grey_9, .glyphsSpriteVerified_small, .glyphsSpriteX__outline__24__grey_9 {
+
+.glyphsSpriteApp_Icon,
+.glyphsSpriteCamera__outline__24__grey_9,
+.glyphsSpriteChevron_left__outline__24__grey_9,
+.glyphsSpriteChevron_right__outline__24__grey_5,
+.glyphsSpriteCircle_add__outline__24__grey_9,
+.glyphsSpriteComment__outline__24__grey_9,
+.glyphsSpriteDelete__outline__24__grey_0,
+.glyphsSpriteDirect__outline__24__grey_9,
+.glyphsSpriteFacebook__outline__24__grey_9,
+.glyphsSpriteHashtag__outline__24__grey_9,
+.glyphsSpriteHeart__filled__24__grey_9,
+.glyphsSpriteHeart__filled__24__red_5,
+.glyphsSpriteHeart__outline__24__grey_9,
+.glyphsSpriteHome__filled__24__grey_9,
+.glyphsSpriteHome__outline__24__grey_9,
+.glyphsSpriteLink__outline__24__grey_9,
+.glyphsSpriteLocation__outline__24__grey_9,
+.glyphsSpriteMail__outline__24__grey_9,
+.glyphsSpriteMobile_nav_type_logo,
+.glyphsSpriteMore_horizontal__filled__24__grey_0,
+.glyphsSpriteMore_horizontal__outline__24__grey_9,
+.glyphsSpriteNew_post__outline__24__grey_9,
+.glyphsSpritePaging_chevron,
+.glyphsSpritePhoto_grid__outline__24__blue_5,
+.glyphsSpritePhoto_grid__outline__24__grey_5,
+.glyphsSpritePhoto_list__outline__24__blue_5,
+.glyphsSpritePhoto_list__outline__24__grey_5,
+.glyphsSpriteSave__filled__24__grey_9,
+.glyphsSpriteSave__outline__24__blue_5,
+.glyphsSpriteSave__outline__24__grey_5,
+.glyphsSpriteSave__outline__24__grey_9,
+.glyphsSpriteSearch__filled__24__grey_9,
+.glyphsSpriteSearch__outline__24__grey_9,
+.glyphsSpriteSettings__outline__24__grey_9,
+.glyphsSpriteShare__outline__24__grey_9,
+.glyphsSpriteShare_facebook,
+.glyphsSpriteShare_messenger,
+.glyphsSpriteShare_twitter,
+.glyphsSpriteShare_whatsapp,
+.glyphsSpriteTag_up__outline__24__blue_5,
+.glyphsSpriteTag_up__outline__24__grey_5,
+.glyphsSpriteUser__filled__24__grey_9,
+.glyphsSpriteUser__outline__24__grey_9,
+.glyphsSpriteUser_follow__outline__24__grey_9,
+.glyphsSpriteVerified_small,
+.glyphsSpriteX__outline__24__grey_9 {
     background-image: url(iconos.png);
 }
 
 
-.glyphsSpriteHeart__outline__24__grey_9, .glyphsSpriteHome__filled__24__grey_9 {
+.glyphsSpriteHeart__outline__24__grey_9,
+.glyphsSpriteHome__filled__24__grey_9 {
     background-repeat: no-repeat;
     background-position: -52px -97px;
     height: 24px;
@@ -872,7 +1173,9 @@ a, a:visited {
 .glyphsSpriteComment__outline__24__grey_9 {
     background-position: -32px -65px;
 }
-.glyphsSpriteCircle_add__outline__24__grey_9, .glyphsSpriteComment__outline__24__grey_9 {
+
+.glyphsSpriteCircle_add__outline__24__grey_9,
+.glyphsSpriteComment__outline__24__grey_9 {
     background-repeat: no-repeat;
     height: 24px;
     width: 24px;
@@ -881,14 +1184,17 @@ a, a:visited {
 .glyphsSpriteSave__outline__24__grey_9 {
     background-position: 0 -149px;
 }
-.glyphsSpriteSave__outline__24__grey_5, .glyphsSpriteSave__outline__24__grey_9 {
+
+.glyphsSpriteSave__outline__24__grey_5,
+.glyphsSpriteSave__outline__24__grey_9 {
     background-repeat: no-repeat;
     background-position: -157px -104px;
     height: 24px;
     width: 24px;
 }
 
-.glyphsSpriteSettings__outline__24__grey_9, .glyphsSpriteShare__outline__24__grey_9 {
+.glyphsSpriteSettings__outline__24__grey_9,
+.glyphsSpriteShare__outline__24__grey_9 {
     background-repeat: no-repeat;
     background-position: -104px -149px;
     height: 24px;
@@ -900,7 +1206,8 @@ a, a:visited {
     background-position: -52px -97px;
 }
 
-.glyphsSpriteHeart__filled__24__grey_9, .glyphsSpriteHeart__filled__24__red_5 {
+.glyphsSpriteHeart__filled__24__grey_9,
+.glyphsSpriteHeart__filled__24__red_5 {
     background-repeat: no-repeat;
     background-position: -26px -97px;
     height: 24px;
@@ -909,13 +1216,17 @@ a, a:visited {
 
 
 
-.EtaWk, .NnvRN {
+.EtaWk,
+.NnvRN {
     margin-bottom: 4px;
 }
+
 .k_Q0X {
     display: block;
 }
-.c-Yi7, .c-Yi7:visited {
+
+.c-Yi7,
+.c-Yi7:visited {
     color: $color-letras;
     margin-bottom: 5px;
     text-transform: uppercase;
@@ -925,6 +1236,7 @@ a, a:visited {
     font-size: 15px;
     line-height: 18px;
 }
+
 .c-Yi7 ._1o9PC {
     font-size: 10px;
     letter-spacing: .2px;
@@ -954,34 +1266,37 @@ a, a:visited {
     top: 4px;
 }
 
-.Ktjgk, .VWmGw, .aIYm8 {
+.Ktjgk,
+.VWmGw,
+.aIYm8 {
     position: absolute;
 }
 
 .coreSpriteSearchClear {
-    background-position:-381px -358px;
+    background-position: -381px -358px;
     height: 20px;
     width: 20px;
 }
+
 .eyXLr {
     display: inline;
     left: -5px;
 }
 
 
-.publicar{
-        flex: 0 1 auto;
-        min-width: 125px;
-        width: 100px;
+.publicar {
+    flex: 0 1 auto;
+    min-width: 125px;
+    width: 100px;
 }
 
-.btn-public{
-    background: $color-letras; 
-    color: $color-texto-form ;
+.btn-public {
+    background: $color-letras;
+    color: $color-texto-form;
     cursor: pointer;
 }
 
-.modal-overlay{
+.modal-overlay {
     z-index: 4001;
     position: fixed;
     top: 0;
@@ -989,17 +1304,58 @@ a, a:visited {
     bottom: 0;
     left: 0;
     z-index: 4000;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.8);
+    align-content: center;
+    justify-content: center;
     display: none;
 }
 
-.hideShare{
+.hideShare {
     display: none;
 }
-.showShare{
-    display: block;
+
+.showShare {
+    display: flex;
 }
+
+.hidden{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
 
 .form-upload{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .file-upload{
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+        div{
+            background: #e6e6e6;
+        }
+    }
+    input,button{
+        position: absolute;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-filter: alpha(opacity=0);
+    }
+    .options{
+        flex-direction: row;
+    }
+     
+}
+.asda{
+    color: #000;
 }
