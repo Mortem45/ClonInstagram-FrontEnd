@@ -1,5 +1,18 @@
-var express = require('express');
-var app = express();
+const express = require('express'),
+        multer = require('multer'),
+        ext = require('file-extension');
+let storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './uploads')
+    },
+    filename: function (req, file, cb) {
+        cb(null,  + Date.now() + '-.' + ext(file.originalname) )
+    }
+})
+let upload = multer({ storage: storage }).single('post');
+let app = express();
+
+
 app.set('view engine', 'pug');
 
 app.use(express.static('public'));
@@ -42,6 +55,15 @@ app.get('/api/posts', function (req, res) {
     setTimeout(()=>{
         res.send(posts);
     },2000);
+})
+
+app.post('/api/posts',function (req, res) {
+    upload(req, res, function(err){
+        if(err){
+            return res.status(500).send("error uploading file")
+        }
+        res.status(200).send('file uploaded')
+    })
 })
 
 app.listen(3000, function (err) { 

@@ -18,7 +18,7 @@ gulp.task('sass', (done) => {
         .pipe(sass({
             includePaths: ['scss']
         }))
-        .pipe(gulp.dest('assets'));
+        .pipe(gulp.dest('public'));
         done();
 });
 
@@ -33,7 +33,7 @@ gulp.task('watch-style', function (done) {
         .pipe(watch('scss/*.scss'))
         .pipe(plumber())
         .pipe(sass())
-        .pipe(gulp.dest('assets'));
+        .pipe(gulp.dest('public'));
         done();
 });
 
