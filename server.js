@@ -1,28 +1,68 @@
 const express = require('express'),
         multer = require('multer'),
-        ext = require('file-extension');
-let storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './uploads')
+        ext = require('file-extension'),
+        config = require('./config'),
+        aws = require('aws-sdk'),
+        multerS3 = require('multer-s3'),
+        cookieParser = require('cookie-parser'),
+        bodyParser = require('body-parser'),
+        expressSession = require('express-session'),
+        passport = require('passport'),
+        cloninstagram = require('cloninstagram-client');
+
+        let s3 = new aws.S3({
+            accessKeyId: config.aws.accessKey,
+            secretAccessKey: config.aws.secretKey
+        })
+
+let storage = multerS3({
+    s3: s3,
+    bucket: 'cloninstagram',
+    acl: 'public-read',  //access control list
+    metadata: function (req, file, cb) {
+        cb(null, { fielName: file.fieldname })
     },
-    filename: function (req, file, cb) {
+    key: function (req, file, cb) {
         cb(null,  + Date.now() + '-.' + ext(file.originalname) )
     }
 })
+
+let client = cloninstagram.createClient(config.client);
 let upload = multer({ storage: storage }).single('post');
+
 let app = express();
 
+app.set(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(cookieParser());
+app.use(expressSession({
+    secret: config.secret,
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.set('view engine', 'pug');
 
 app.use(express.static('public'));
 
-app.get('/',function (req, res){ 
+app.get('/',function (req, res){
     res.render('index.pug', {title: 'Instagram'});
 });
-app.get('/signup',function (req, res){ 
+app.get('/signup',function (req, res){
     res.render('index.pug', {title: 'Instagram - Signup'});
 });
+
+app.post('/signup', function (req, res) {
+    let user = req.body;
+    client.saveUser(user, function (err, usr) {
+        if (err) return res.status(500).send(err.message);
+        res.redirect('/signin ');
+    })
+})
+
 app.get('/signin',function (req, res){
      res.render('index.pug', {title: 'Instagram - Signin'});
 });
@@ -66,7 +106,7 @@ app.post('/api/posts',function (req, res) {
     })
 })
 
-app.listen(3000, function (err) { 
+app.listen(3000, function (err) {
     if (err) return console.log('Hubo un error'), process.exit(1);
     console.log('server escuchando en puerto 3000')
 })

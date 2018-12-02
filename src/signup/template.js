@@ -6,7 +6,7 @@ let signupForm = yo`<div class="contenedor-forms ">
 <div class="signup-box ">
     <h1 class=" titulo  coreSpriteLoggedOutWordmark">Instagram</h1>
     <div class="cont_form-signup">
-        <form class="form-signup" method="post">
+        <form class="form-signup" method="post" action="/signup">
             <h2 class="slogan ">${translate.message('signup.subheading')}</h2>
             <span class=" span-btn">
                 <button class="botones  color-btns  KUBKM  cursor ">
@@ -22,7 +22,7 @@ let signupForm = yo`<div class="contenedor-forms ">
                     <div class="cont3-input ">
                         <input class=" input-signup" id="email-tel" aria-label="${translate.message('email')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="tel" name="emailOrPhone" type="text" placeholder="${translate.message('email')}">
+                            autocomplete="tel" name="email" type="text" placeholder="${translate.message('email')}">
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -31,7 +31,7 @@ let signupForm = yo`<div class="contenedor-forms ">
                 <div class="cont2-input   ">
                     <div class="cont3-input ">
                         <input class=" input-signup " id="name" aria-label="${translate.message('fullname')}"
-                            aria-required="false" autocapitalize="sentences" autocorrect="off" name="fullName"
+                            aria-required="false" autocapitalize="sentences" autocorrect="off" name="name"
                             type="text" placeholder="${translate.message('fullname')}">
                         </div>
                     <div class="div-soport"></div>
@@ -58,10 +58,10 @@ let signupForm = yo`<div class="contenedor-forms ">
                     <div class="div-soport"></div>
                 </div>
             </div>
-            
+
             <div>
                 <span class=" span-btn">
-                    <button class="botones  color-btns KUBKM cursor ">${translate.message('signup.call-to-action')}</button>
+                    <button class="botones  color-btns KUBKM cursor " type="submit" >${translate.message('signup.call-to-action')}</button>
                 </span>
             </div>
             <p class="ter_y_cond">
