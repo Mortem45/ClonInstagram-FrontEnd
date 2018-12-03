@@ -58,8 +58,8 @@ app.get('/signup',function (req, res){
 app.post('/signup', function (req, res) {
     let user = req.body;
     client.saveUser(user, function (err, usr) {
-        if (err) return res.status(500).send(err.message);
-        res.redirect('/signin ');
+        if (err) return res.status(500).send(err.message) ;
+        res.redirect('/signin');
     })
 })
 

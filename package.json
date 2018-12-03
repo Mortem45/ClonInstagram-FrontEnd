@@ -4,7 +4,8 @@
   "description": "esta es un clon de instagram, hecha con fines educativos.",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "rm -r public & gulp & node server.js"
+    "start": "node server.js",
+    "build": "rm -r public & gulp"
   },
   "author": "Brandon Estiben Monterrozo",
   "license": "MIT",
