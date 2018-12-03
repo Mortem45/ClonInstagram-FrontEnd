@@ -6,13 +6,13 @@ let signinForm = yo`<div class="contenedor-forms ">
 <div class="signup-box">
     <h1 class=" titulo  coreSpriteLoggedOutWordmark">Instagram</h1>
     <div class="cont_form-signup">
-        <form class="form-signup" method="post">
+        <form class="form-signup" method="post" action="/login">
             <div class="cont-input">
                 <div class="cont2-input ">
                     <div class="cont3-input ">
                         <input class=" input-signup" id="email-tel" aria-label="${translate.message('signin.email')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="tel" name="emailOrPhone" type="text" placeholder="${translate.message('signin.email')}">
+                            autocomplete="tel" name="username" type="text" placeholder="${translate.message('signin.email')}">
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -28,10 +28,10 @@ let signinForm = yo`<div class="contenedor-forms ">
                     <div class="div-soport"></div>
                 </div>
             </div>
-            
+
             <div>
                 <span class=" span-btn">
-                    <button class="botones  color-btns KUBKM cursor ">${translate.message('signin')}</button>
+                    <button class="botones  color-btns KUBKM cursor " type="submit">${translate.message('signin')}</button>
                 </span>
             </div>
             <p class="ter_y_cond"> <a href="">${translate.message('recover')}</a></p>

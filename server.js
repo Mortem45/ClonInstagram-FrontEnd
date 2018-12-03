@@ -8,7 +8,8 @@ const express = require('express'),
         bodyParser = require('body-parser'),
         expressSession = require('express-session'),
         passport = require('passport'),
-        cloninstagram = require('cloninstagram-client');
+        cloninstagram = require('cloninstagram-client'),
+        auth = require('./auth');
 
         let s3 = new aws.S3({
             accessKeyId: config.aws.accessKey,
@@ -48,6 +49,10 @@ app.set('view engine', 'pug');
 
 app.use(express.static('public'));
 
+passport.use(auth.localStrategy);
+passport.deserializeUser(auth.deserializeUser);
+passport.serializeUser(auth.serializeUser);
+
 app.get('/',function (req, res){
     res.render('index.pug', {title: 'Instagram'});
 });
@@ -66,6 +71,20 @@ app.post('/signup', function (req, res) {
 app.get('/signin',function (req, res){
      res.render('index.pug', {title: 'Instagram - Signin'});
 });
+
+app.post('/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/signin',
+    failureFlash:true
+}));
+
+function ensureAuth (req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+
+    res.status(401).send({ error: 'not authenticated' })
+}
 
 app.get('/api/posts', function (req, res) {
     let posts = [
@@ -97,7 +116,7 @@ app.get('/api/posts', function (req, res) {
     },2000);
 })
 
-app.post('/api/posts',function (req, res) {
+app.post('/api/posts', ensureAuth, function (req, res) {
     upload(req, res, function(err){
         if(err){
             return res.status(500).send("error uploading file")
