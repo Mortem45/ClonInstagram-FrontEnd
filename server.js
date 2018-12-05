@@ -10,6 +10,7 @@ const express = require('express'),
         passport = require('passport'),
         cloninstagram = require('cloninstagram-client'),
         auth = require('./auth');
+const port = process.env.PORT || 5050;
 
         let s3 = new aws.S3({
             accessKeyId: config.aws.accessKey,
@@ -50,6 +51,7 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 passport.use(auth.localStrategy);
+passport.use(auth.facebookStrategy);
 passport.deserializeUser(auth.deserializeUser);
 passport.serializeUser(auth.serializeUser);
 
@@ -74,6 +76,14 @@ app.get('/signin',function (req, res){
 });
 
 app.post('/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/signin',
+    failureFlash:true
+}));
+
+app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' }));
+
+app.get('/auth/facebook/callback', passport.authenticate('facebook', {
     successRedirect: '/',
     failureRedirect: '/signin',
     failureFlash:true
@@ -166,7 +176,7 @@ app.get('/:username', function (req, res) {
     res.render('index', {title: `Instagram - ${req.params.username}` })
 })
 
-app.listen(3000, function (err) {
+app.listen(port, function (err) {
     if (err) return console.log('Hubo un error'), process.exit(1);
-    console.log('server escuchando en puerto 3000')
+    console.log(`server escuchando en puerto ${port}`)
 })

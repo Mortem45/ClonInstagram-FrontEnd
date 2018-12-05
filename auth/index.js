@@ -2,6 +2,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 const cloninstagramClient = require('cloninstagram-client');
 const config = require('../config');
+const jwt = require('jsonwebtoken');
 
 
 let client = cloninstagramClient.createClient(config.client);
@@ -35,8 +36,16 @@ exports.facebookStrategy = new FacebookStrategy ({
     email: prodile._json.email,
     facebook: true
   }
+
   findOrCreate(userProfile, (err, user) => {
-    return done(null, user);
+    if (err) return done(err);
+
+    jwt.sign( { userId: user.username }, config.secret, {}, (e, token) => {
+      if (e) return done(e);
+
+      user.token = token;
+      return done(null, user);
+    })
   })
 
   function findOrCreate(userm, done) {

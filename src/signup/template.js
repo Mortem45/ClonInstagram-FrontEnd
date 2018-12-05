@@ -6,17 +6,20 @@ let signupForm = yo`<div class="contenedor-forms ">
 <div class="signup-box ">
     <h1 class=" titulo  coreSpriteLoggedOutWordmark">Instagram</h1>
     <div class="cont_form-signup">
-        <form class="form-signup" method="post" action="/signup">
             <h2 class="slogan ">${translate.message('signup.subheading')}</h2>
-            <span class=" span-btn">
-                <button class="botones  color-btns  KUBKM  cursor ">
-                    <span class="coreSpriteFacebookIconInverted det-btn"></span>${translate.message('signup.facebook')}</button>
-            </span>
-            <div class="divform ">
-                <div class="linea"></div>
-                <div class="letdiv">${translate.message('or')}</div>
-                <div class="linea"></div>
-            </div>
+            <a href="/auth/facebook" rel="external">
+                <span class=" span-btn">
+                    <button class="botones  color-btns  KUBKM  cursor ">
+                        <span class="coreSpriteFacebookIconInverted det-btn"></span>${translate.message('signup.facebook')}
+                    </button>
+                </span>
+            </a>
+                <div class="divform ">
+                    <div class="linea"></div>
+                    <div class="letdiv">${translate.message('or')}</div>
+                    <div class="linea"></div>
+                </div>
+        <form class="form-signup" method="post" action="/signup">
             <div class="cont-input">
                 <div class="cont2-input   ">
                     <div class="cont3-input ">

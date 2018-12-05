@@ -10,16 +10,15 @@ const config = {
       pictures: 'http://api.cloninstagram.com/picture',
       user: 'http://api.cloninstagram.com/user',
       auth: 'http://api.cloninstagram.com/auth',
-      callbackURL: 'http://cloninstagram.com/auth/facebook/callback'
     }
   },
   auth: {
     facebook: {
       clientID: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-
+      callbackURL: 'http://cloninstagram.com/auth/facebook/callback'
     }
-  }
+  },
   secret: process.env.CLONINSTAGRAM_SECRET || 'cloninstagram'
 }
 

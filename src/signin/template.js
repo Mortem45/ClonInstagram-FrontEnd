@@ -6,6 +6,17 @@ let signinForm = yo`<div class="contenedor-forms ">
 <div class="signup-box">
     <h1 class=" titulo  coreSpriteLoggedOutWordmark">Instagram</h1>
     <div class="cont_form-signup">
+            <span class=" span-btn">
+                <a href="/auth/facebook" rel="external">
+                    <button class="botones  color-btns  KUBKM  cursor ">
+                    <span class="coreSpriteFacebookIconInverted det-btn"></span>${translate.message('signup.facebook')}</button>
+                </a>
+            </span>
+            <div class="divform ">
+                <div class="linea"></div>
+                <div class="letdiv">${translate.message('or')}</div>
+                <div class="linea"></div>
+            </div>
         <form class="form-signup" method="post" action="/login">
             <div class="cont-input">
                 <div class="cont2-input ">
