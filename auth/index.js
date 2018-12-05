@@ -1,4 +1,5 @@
 const LocalStrategy = require('passport-local').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 const cloninstagramClient = require('cloninstagram-client');
 const config = require('../config');
 
@@ -20,6 +21,33 @@ exports.localStrategy = new LocalStrategy((username, password, done) => {
       return done(null, user);
     })
   })
+});
+
+exports.facebookStrategy = new FacebookStrategy ({
+  clientID: config.auth.facebook.clientID,
+  clientSecret: config.auth.facebook.clientSecret,
+  callbackURL: config.auth.facebook.callbackURL,
+  profileFields: ['id', 'displayName', 'email']
+}, function (accessToken, refreshToken, profile, done) {
+  let userProfile = {
+    username: profile._json.id,
+    name: profile._json.name,
+    email: prodile._json.email,
+    facebook: true
+  }
+  findOrCreate(userProfile, (err, user) => {
+    return done(null, user);
+  })
+
+  function findOrCreate(userm, done) {
+    client.getUser(user.username, (err, usr) => {
+      if (err) {
+        return client.saveUser(user, callback);
+      }
+
+      callback(null, usr);
+    })
+  }
 });
 
 

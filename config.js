@@ -10,8 +10,16 @@ const config = {
       pictures: 'http://api.cloninstagram.com/picture',
       user: 'http://api.cloninstagram.com/user',
       auth: 'http://api.cloninstagram.com/auth',
+      callbackURL: 'http://cloninstagram.com/auth/facebook/callback'
     }
   },
+  auth: {
+    facebook: {
+      clientID: process.env.FACEBOOK_CLIENT_ID,
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+
+    }
+  }
   secret: process.env.CLONINSTAGRAM_SECRET || 'cloninstagram'
 }
 
@@ -21,6 +29,8 @@ if (process.env.NODE_ENV !== 'production') {
     users: 'http://localhost:5001',
     auth: 'http://localhost:5002'
   }
+
+  config.auth.facebook.callbackURL = 'http://cloninstagram.test:5050/auth/facebook/callback'
 }
 
 module.exports = config;
