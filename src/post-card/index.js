@@ -11,14 +11,14 @@ module.exports = function postCard(post) {
             <div class="RR-M-  mrq0Z" role="button" tabindex="0">
                 <canvas class="CfWVH" style="position: absolute; top: -5px; left: -5px; width: 40px; height: 40px;" width="36"
                     height="36"></canvas>
-                <a class="_2dbep qNELH kIKUG" style="width: 30px; height: 30px;" href="/user/${post.user.urlperfil}">
+                <a class="_2dbep qNELH kIKUG" style="width: 30px; height: 30px;" href="/${post.user.urlperfil}">
                     <img class="_6q-tv" src="${post.user.avatar}"
                         alt="Foto del perfil"></a>
             </div>
 
             <div class="o-MQd  ">
                 <div class=" ">
-                    <div class="e1e1d"><a class="FPmhX notranslate nJAzx" title="${post.user.username}" href="/user/${post.user.urlperfil}">${post.user.username}</a></div>
+                    <div class="e1e1d"><a class="FPmhX notranslate nJAzx" title="${post.user.username}" href="/${post.user.urlperfil}">${post.user.username}</a></div>
                 </div>
                 <div class="M30cS"></div>
             </div>

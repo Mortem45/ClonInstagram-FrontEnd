@@ -56,6 +56,7 @@ passport.serializeUser(auth.serializeUser);
 app.get('/',function (req, res){
     res.render('index.pug', {title: 'Instagram'});
 });
+
 app.get('/signup',function (req, res){
     res.render('index.pug', {title: 'Instagram - Signup'});
 });
@@ -111,9 +112,7 @@ app.get('/api/posts', function (req, res) {
             createdAt: new Date().setDate(new Date().getDate() - 10)
         }
     ];
-    setTimeout(()=>{
         res.send(posts);
-    },2000);
 })
 
 app.post('/api/posts', ensureAuth, function (req, res) {
@@ -123,6 +122,48 @@ app.post('/api/posts', ensureAuth, function (req, res) {
         }
         res.status(200).send('file uploaded')
     })
+})
+
+app.get('/api/user/:username', function (req, res) {
+    const user = {
+        username: 'mortem45',
+        avatar: 'https://instagram.fgua3-2.fna.fbcdn.net/vp/08752db88960c76fa4dbef02e2d209d6/5CA30568/t51.2885-19/s150x150/14624640_1249069575143256_4371287421740908544_a.jpg',
+        pictures: [
+            {
+                id: 1,
+                src: 'https://instagram.fgua3-2.fna.fbcdn.net/vp/cab020c00eef9b03a124965853b1325a/5C913FFD/t51.2885-15/sh0.08/e35/s640x640/45597873_369326860480856_7475198358789429575_n.jpg',
+                likes: 3
+            },
+            {
+                id: 2,
+                src: 'https://instagram.fgua3-2.fna.fbcdn.net/vp/dc92ae8aec411f7d38972d0c1118fcba/5CAF59EF/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/44907918_263287704387961_8402845867438998397_n.jpg',
+                likes: 6
+            },
+            {
+                id: 3,
+                src: 'https://instagram.fgua3-2.fna.fbcdn.net/vp/0b7adf2f51842572d7c9b14d04e53a41/5C90E26D/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/43985907_340863496472758_5281305871541005837_n.jpg',
+                likes: 8
+            },{
+                id: 4,
+                src: 'https://instagram.fgua3-2.fna.fbcdn.net/vp/cab020c00eef9b03a124965853b1325a/5C913FFD/t51.2885-15/sh0.08/e35/s640x640/45597873_369326860480856_7475198358789429575_n.jpg',
+                likes: 3
+            },
+            {
+                id: 5,
+                src: 'https://instagram.fgua3-2.fna.fbcdn.net/vp/dc92ae8aec411f7d38972d0c1118fcba/5CAF59EF/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/44907918_263287704387961_8402845867438998397_n.jpg',
+                likes: 6
+            },
+            {
+                id: 6,
+                src: 'https://instagram.fgua3-2.fna.fbcdn.net/vp/0b7adf2f51842572d7c9b14d04e53a41/5C90E26D/t51.2885-15/sh0.08/e35/c0.135.1080.1080/s640x640/43985907_340863496472758_5281305871541005837_n.jpg',
+                likes: 8
+            }
+        ]
+    }
+    res.send(user);
+})
+app.get('/:username', function (req, res) {
+    res.render('index', {title: `Instagram - ${req.params.username}` })
 })
 
 app.listen(3000, function (err) {

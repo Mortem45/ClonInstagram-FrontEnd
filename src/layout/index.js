@@ -37,8 +37,8 @@ module.exports = function layout(content){
                                             </div>
                                         </div>
                                     </div>
-                                </div> 
-                            </form> 
+                                </div>
+                            </form>
                         </div>
                 </main>
                 <nav class="navegacion">
@@ -71,7 +71,7 @@ module.exports = function layout(content){
                                         <div class="XrOey">
                                             <a class="Szr5J kIKUG coreSpriteDesktopNavProfile" href="">Perfil</a>
                                         </div>
-                                        
+
                                         <div class="publicar _0aCwM XrOey" onclick="${showShare}">
                                             <div class="pbgfb Di7vw btn-public">
                                                 <div class="eyXLr wUAXj ">
@@ -84,7 +84,7 @@ module.exports = function layout(content){
                                         <div class="XrOey pubmov" onclick="${showShare}">
                                             <span class="Szr5J kIKUG glyphsShare" ></span>
                                         </div>
-            
+
                                     </div>
                                 </div>
                             </div>
@@ -92,8 +92,8 @@ module.exports = function layout(content){
                     </div>
                 </nav>
             </section>
-            </span>`; 
-        
+            </span>`;
+
 
             function showShare() {
                 document.getElementById('modaloverlay').classList.toggle('showShare');
@@ -109,7 +109,7 @@ module.exports = function layout(content){
                     .send(data)
                     .end(function (err, res) {
                         console.log(err,res);
-                        
+
                     })
                     showShare();
             }
