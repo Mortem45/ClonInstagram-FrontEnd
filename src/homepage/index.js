@@ -2,9 +2,10 @@ const page = require('page'),
       empty = require('empty-element'),
       template = require('./template'),
       request = require('superagent'),
-      header = require('../header');
+      header = require('../header'),
+      utils = require('../utils');
 
-page('/', header, loadPosts, function(ctx ,next){
+page('/', utils.loadAuth, header, loadPosts, function(ctx ,next){
     let main = document.getElementById('main-container');
     empty(main).appendChild(template(ctx.posts));
 })

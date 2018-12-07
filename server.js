@@ -81,6 +81,11 @@ app.post('/login', passport.authenticate('local', {
     failureFlash:true
 }));
 
+app.get('/logout', function (req, res) {
+    req.logOut();
+    res.redirect('/');
+})
+
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' }));
 
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {

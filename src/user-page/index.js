@@ -4,14 +4,13 @@ import template from './template'
 import title from 'title'
 import request from 'superagent'
 import header from '../header';
+import utils from '../utils'
 
-page('/:username', loadUser, header, function(ctx ,next){
+page('/:username', utils.loadAuth, loadUser, header, function(ctx ,next){
     let main = document.getElementById('main-container');
     title(`ClonInstagram - ${ctx.params.username}`)
     empty(main).appendChild(template(ctx.user));
 })
-
-
 
 function loadUser(ctx, next) {
     request

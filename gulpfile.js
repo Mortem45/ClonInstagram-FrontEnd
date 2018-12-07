@@ -38,7 +38,7 @@ gulp.task('watch-style', function (done) {
 
 gulp.task('build', function (done) {
     return browserify('./src/index.js', { debug: true })
-        .transform(babelify, {presets: ["@babel/preset-env"]})
+        .transform(babelify, {presets: ["@babel/preset-env"], plugins: [ '@babel/plugin-syntax-async-generators', '@babel/plugin-transform-regenerator', '@babel/plugin-transform-runtime' ]})
         .bundle()
         .pipe(source('index.js'))
         .pipe(gulp.dest('public'));
