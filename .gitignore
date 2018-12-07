@@ -65,3 +65,4 @@ typings/
 #carpeta publica
 public/
 env.sh
+.vscode/

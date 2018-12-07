@@ -97,6 +97,14 @@ function ensureAuth (req, res, next) {
     res.status(401).send({ error: 'not authenticated' })
 }
 
+
+app.get('/whoami', function (req, res) {
+    if (req.isAuthenticated()) {
+        return res.json(req.user);
+    }
+    res.json({ auth: false })
+})
+
 app.get('/api/posts', function (req, res) {
     let posts = [
         {
