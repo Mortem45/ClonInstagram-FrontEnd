@@ -21,9 +21,9 @@ let signinForm = yo`<div class="contenedor-forms ">
             <div class="cont-input">
                 <div class="cont2-input ">
                     <div class="cont3-input ">
-                        <input class=" input-signup" id="email-tel" aria-label="${translate.message('signin.email')}"
+                        <input class=" input-signup" id="email-tel" aria-label="${translate.message('signin.email')} "
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="tel" name="username" type="text" placeholder="${translate.message('signin.email')}">
+                            autocomplete="tel" name="username" type="text" placeholder="${translate.message('signin.email')}" required>
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -34,7 +34,7 @@ let signinForm = yo`<div class="contenedor-forms ">
                         <input
                             class=" input-signup    " id="password" aria-label="${translate.message('password')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="new-password" name="password" type="password" value="" placeholder="${translate.message('password')}">
+                            autocomplete="new-password" name="password" type="password" value="" placeholder="${translate.message('password')}" >
                         </div>
                     <div class="div-soport"></div>
                 </div>

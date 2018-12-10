@@ -25,7 +25,7 @@ let signupForm = yo`<div class="contenedor-forms ">
                     <div class="cont3-input ">
                         <input class=" input-signup" id="email-tel" aria-label="${translate.message('email')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="tel" name="email" type="text" placeholder="${translate.message('email')}">
+                            autocomplete="tel" name="email" type="text" placeholder="${translate.message('email')}" required>
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -35,7 +35,7 @@ let signupForm = yo`<div class="contenedor-forms ">
                     <div class="cont3-input ">
                         <input class=" input-signup " id="name" aria-label="${translate.message('fullname')}"
                             aria-required="false" autocapitalize="sentences" autocorrect="off" name="name"
-                            type="text" placeholder="${translate.message('fullname')}">
+                            type="text" placeholder="${translate.message('fullname')}" required>
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -45,7 +45,7 @@ let signupForm = yo`<div class="contenedor-forms ">
                     <div class="cont3-input ">
                             <input class=" input-signup" id="username"
                             aria-label="${translate.message('username')}" aria-required="true" autocapitalize="off"
-                            autocorrect="off" maxlength="30" name="username" type="text" placeholder="${translate.message('username')}">
+                            autocorrect="off" maxlength="30" name="username" type="text" placeholder="${translate.message('username')}" required>
                         </div>
                     <div class="div-soport"></div>
                 </div>
@@ -56,7 +56,7 @@ let signupForm = yo`<div class="contenedor-forms ">
                         <input
                             class=" input-signup    " id="password" aria-label="${translate.message('password')}"
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="new-password" name="password" type="password" value="" placeholder="${translate.message('password')}">
+                            autocomplete="new-password" name="password" type="password" value="" placeholder="${translate.message('password')}" required>
                         </div>
                     <div class="div-soport"></div>
                 </div>

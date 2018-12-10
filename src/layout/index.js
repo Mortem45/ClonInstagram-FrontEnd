@@ -42,8 +42,29 @@ module.exports = function layout(content){
                         </div>
                 </main>
             </section>
-            </span>`;
+        <div>
+        <div id="infPerfil" class="RnEpo Yx5HN oculto" role="presentation">
+            <button aria-hidden="true" class="yvwbg" tabindex="-1"></button>
+            <div class="pbNvD fPMEg " role="dialog">
+            <div class="piCib">
+                <div class="mt3GC">
+                <a href="/perfil">
+                <button class="_2dbep qNELH kIKUG aOOlW   HoLwm " tabindex="0">Mi Perfil</button>
+                </a>
+                <a href="/logout" rel="external">
+                <button class="aOOlW   HoLwm " tabindex="0">Salir</button>
+                </a>
+                <a href="#">
+                <button class="aOOlW   HoLwm "tabindex="0">Cancelar</button>
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        </span>`;
 
+            let infPerfil = document.getElementById('infPerfil');
 
             function showShare() {
                 document.getElementById('modaloverlay').classList.toggle('showShare');

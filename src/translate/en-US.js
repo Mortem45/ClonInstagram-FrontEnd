@@ -1,5 +1,5 @@
 module.exports = {
-    likes: '{ likes, plural, ' +   
+    likes: '{ likes, plural, ' +
             '=0 {no likes}' +
             '=1 {# like}' +
             'other {# likes}}',
@@ -26,5 +26,7 @@ module.exports = {
     'comment': 'Add a comment...',
     'share': 'Share',
     'upload': 'Upload',
-    'cancel': 'Cancel'
+    'cancel': 'Cancel',
+    'signin.unauthorized': 'Log In to ClonInstagram',
+    'signin.unauthorized-text': "Log in to see photos and videos from friends and discover other accounts you'll love.",
 }

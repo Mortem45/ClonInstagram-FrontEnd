@@ -23,6 +23,7 @@ module.exports = {
         'comment': 'Agrega un comentario',
         'share' : 'Compartir',
         'upload': 'Subir',
-        'cancel': 'Cancelar'
-
+        'cancel': 'Cancelar',
+        'signin.unauthorized': 'Iniciar sesíon en ClonInstagram',
+        'signin.unauthorized-text': 'Inicia sesíon para ver las fotos y los videos de tus amigos y descubrir otras cuentas que te encantarán.',
       }
