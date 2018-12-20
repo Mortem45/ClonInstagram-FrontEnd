@@ -10,7 +10,9 @@ ul {
     list-style: none
 }
 
-
+.oculto {
+    display: none;
+  }
 
 ._3Laht,
 .o64aR {
@@ -1333,44 +1335,6 @@ a:visited {
 }
 
 
-.form-upload {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .file-upload {
-        position: relative;
-        overflow: hidden;
-        margin: 10px;
-
-        div {
-            background: $color-bordes;
-        }
-    }
-
-    input,
-    button {
-        position: absolute;
-        margin: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        padding: 0;
-        font-size: 20px;
-        cursor: pointer;
-        opacity: 0;
-        filter: alpha(opacity=0);
-        -webkit-filter: alpha(opacity=0);
-        width: 100%;
-        height: 100%;
-    }
-
-    .options {
-        flex-direction: row;
-    }
-
-}
 
 .glyphsShare {
     height: 24px;
@@ -2228,7 +2192,7 @@ a:visited {
     text-align: center;
     color: white;
   }
-  .post:hover.post-overlay {
+  .post:hover .post-overlay {
     display: flex;
   }
   .post-like,
@@ -2251,7 +2215,9 @@ a:visited {
         line-height: 18px;
       }
   }
-
+._1p1TY {
+    position: absolute;
+}
 
   /* ****************************************** */
 
@@ -2686,9 +2652,142 @@ a:visited {
     vertical-align: middle;
   }
 
-  .oculto {
-    display: none;
-  }
+
   .visible {
       display: flex;
   }
+
+  .post-container {
+    flex-direction: column;
+    padding-bottom: 5600px;
+    padding-top: 0px;
+  }
+
+  ._8Rna9 {
+    order: 5;
+    padding: 0 20px;
+}
+._3Laht, .o64aR {
+    background-color: #fafafa;
+}
+
+.iseBh {
+    font-size:12px;
+    font-weight:600;
+    margin:0 auto;
+    text-transform:uppercase;
+    width:100%
+   }
+
+@media (min-width:876px) {
+    .SkY6J,
+    .VWk7Y {
+     flex-direction:row;
+     flex-wrap:wrap;
+     justify-content:space-between;
+     padding:38px 0
+    }
+    .SkY6J .uxKLF,
+    .VWk7Y .uxKLF {
+    max-width:100%
+    }
+    .SkY6J .ixdEe,
+    .VWk7Y .ixdEe {
+    margin-right:16px
+    }
+}
+@media (max-width:875px) {
+    .SkY6J,
+    .VWk7Y {
+     padding:10px 0;
+     text-align:center
+    }
+    .SkY6J .ixdEe,
+    .VWk7Y .ixdEe {
+     justify-content:center;
+     margin:0 auto;
+     max-width:360px
+    }
+   }
+   .iseBh {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.ixdEe {
+    flex-grow:1;
+    margin-bottom:3px
+   }
+
+   .K5OFK {
+    display: inline-block;
+    margin-bottom: 7px;
+    margin-right: 16px;
+}
+footer {
+    bottom: 0;
+}
+
+.mt3GC{
+    align-items: center;
+  }
+
+
+  .form-upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .file-upload {
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+
+        div {
+            background: $color-bordes;
+        }
+    }
+
+    #file,
+    button {
+        position: absolute;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        width: 100%;
+        height: 100%;
+    }
+
+    .options {
+        flex-direction: row;
+    }
+}
+
+.description{
+    width: 300px;
+   }
+   .image-carga{
+     max-width: 250px;
+     max-height: 250px;
+     margin-bottom: 15px;
+   }
+
+   .ocult{
+       display: none;
+   }
+.post-image{
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}

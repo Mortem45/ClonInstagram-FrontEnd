@@ -20,7 +20,7 @@ let authCard = function (ctx) {
           </div>
         </div>
       </div>
-      <div class="XrOey pubmov" onclick="showShare">
+      <div class="XrOey pubmov" onclick=${showShare}>
         <span class="Szr5J kIKUG glyphsShare"></span>
       </div>
     </div>`
@@ -35,20 +35,13 @@ let authCard = function (ctx) {
             <div class="pHxcJ">
               <div class="gAoda coreSpriteLoggedOutGenericUpsell"></div>
               <span class="_0DvBq">
-                <div class="gAo1g">${translate.message('signin.unauthorized')}</div>
-                <div class="nwq6V">${translate.message('signin.unauthorized-text')}</div>
+                <div class="gAo1g">${translate.message('alert.title')}</div>
+                <div class="nwq6V">${translate.message('alert.text')}</div>
               </span>
               <span class="DZiHE">
-                <a href="/signin">
                   <span class="aPBwk  _1OSdk">
-                    <button class="_5f5mN jIbKX KUBKM yZn4P">${translate.message('signin')}</button>
+                    <button class="_5f5mN jIbKX KUBKM yZn4P" onclick=${showShare2}>${translate.message('get-it')}</button>
                   </span>
-                </a>
-                <a href="/signup">
-                  <span class=" G2rOZ _1OSdk">
-                    <button class="_5f5mN tA8g2 KUBKM yZn4P">${translate.message('signup.call-to-action')}</button>
-                  </span>
-                </a>
               </span>
             </div>
           </div>
@@ -79,8 +72,8 @@ let renderHeader = function (ctx) {
               <div class="MWDvN ">
                   <div class="oJZym">
                       <div class="aU2HW">
-                          <a class="Szr5J coreSpriteDesktopNavLogoAndWordmark _7mese" href="">Instagram</a>
-                          <a class=" Szr5J efNlB coreSpriteGlyphBlack" href="">Instagram</a>
+                          <a class="Szr5J coreSpriteDesktopNavLogoAndWordmark _7mese" href="/">Instagram</a>
+                          <a class=" Szr5J efNlB coreSpriteGlyphBlack" href="/">Instagram</a>
                       </div>
                   </div>
                   <div class="LWmhU _0aCwM">

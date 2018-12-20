@@ -21,9 +21,9 @@ let signinForm = yo`<div class="contenedor-forms ">
             <div class="cont-input">
                 <div class="cont2-input ">
                     <div class="cont3-input ">
-                        <input class=" input-signup" id="email-tel" aria-label="${translate.message('signin.email')} "
+                        <input class=" input-signup" id="email-tel" aria-label="${translate.message('signin.username')} "
                             aria-required="true" autocapitalize="off" autocorrect="off"
-                            autocomplete="tel" name="username" type="text" placeholder="${translate.message('signin.email')}" required>
+                            autocomplete="tel" name="username" type="text" placeholder="${translate.message('signin.username')}" required>
                         </div>
                     <div class="div-soport"></div>
                 </div>

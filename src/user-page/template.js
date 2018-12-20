@@ -15,7 +15,7 @@ export default function userPageTemplate(user) {
     </div>
     <section class="zwlfE">
       <div class="nZSzR">
-        <h1 class="_7UhW9 fKFbl yUEEX  KV-D4 fDxYl">mortem45</h1>
+        <h1 class="_7UhW9 fKFbl yUEEX  KV-D4 fDxYl">${user.name}</h1>
       </div>
       <ul class="k9GMp respoc">
         <li class="Y8-fY ">
@@ -63,7 +63,7 @@ export default function userPageTemplate(user) {
               </figure>
               <span class="post-overlay">
                 <p>
-                  <span class="post-likes">${picture.likes}</span>
+                  <span class="post-likes">${picture.likes || 0}</span>
                   <span class="_1p1TY coreSpriteHeartSmall"></span>
                 </p>
               </span>
@@ -79,6 +79,7 @@ export default function userPageTemplate(user) {
   </div>
 </div>`;
 
+window.scrollTo(0,0)
 return layout(el)
 }
 

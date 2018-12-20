@@ -3,11 +3,11 @@ const yo = require('yo-yo'),
     post = require('../post-card');
 
 
-    module.exports  = function (posts){ 
+    module.exports  = function (posts){
     let template = yo` <section class="_1SP8R j9XKR ">
         <div class="cGcGK">
             <div>
-                <div style="flex-direction: column; padding-bottom: 5600px; padding-top: 0px;">   
+                <div id="post-container" class=" post-container ">
                     ${posts.map(function (pos){
                         return post(pos);
                     })}
