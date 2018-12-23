@@ -9,8 +9,12 @@ const express = require('express'),
         expressSession = require('express-session'),
         passport = require('passport'),
         cloninstagram = require('cloninstagram-client'),
-        auth = require('./auth');
-const port = process.env.PORT || 5050;
+        auth = require('./auth'),
+        fs = require('fs'),
+        https = require('https');
+
+const httpPort = process.env.PORT || 5050;
+const httpsPort = process.env.PORTHTTPS || 443;
 
         let s3 = new aws.S3({
             accessKeyId: config.aws.accessKey,
@@ -172,7 +176,15 @@ app.get('/:username', function (req, res) {
     res.render('index', {title: `Instagram - ${req.params.username}` })
 })
 
-app.listen(port, function (err) {
+app.listen(httpPort, function (err) {
     if (err) return console.log('Hubo un error'), process.exit(1);
-    console.log(`server escuchando en puerto ${port}`)
+    console.log(`server escuchando en puerto ${httpPort}`)
+})
+
+https.createServer({
+    key: fs.readFileSync('key.key'),
+    cert: fs.readFileSync('key.crt')
+}, app).listen(httpsPort, function (err) {
+    if (err) return console.log('Hubo un error'), process.exit(1);
+    console.log(`server escuchando en puerto ${httpsPort}`)
 })
