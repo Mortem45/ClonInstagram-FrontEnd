@@ -14,7 +14,7 @@ const express = require('express'),
         https = require('https');
 
 const httpPort = process.env.PORT || 5050;
-const httpsPort = process.env.PORTHTTPS || 443;
+const httpsPort = process.env.PORTHTTPS || 5252;
 
         let s3 = new aws.S3({
             accessKeyId: config.aws.accessKey,
@@ -107,7 +107,6 @@ function ensureAuth (req, res, next) {
 
 app.get('/api/post/:id', function (req, res) {
     let id = req.params.id
-    console.log(id);
     client.getPicture(id, function (err, post) {
         if (err) return res.status(500).send(err.message);
         res.send(post);
@@ -119,6 +118,14 @@ app.get('/whoami', function (req, res) {
         return res.json(req.user);
     }
     res.json({ auth: false })
+})
+
+app.get('/whoami2', function (req, res) {
+    if (req.isAuthenticated() == true) {
+        return res.json({ auth: true })
+    } else {
+        res.json({ auth: false })
+    }
 })
 
 app.get('/api/posts', function (req, res) {
@@ -156,14 +163,17 @@ app.post('/api/posts', ensureAuth, function (req, res) {
     })
 })
 
-app.post('/api/post/:id/like', function (req, res) {
-    let id = req.params.id
-    client.likePicture(id , function (err, img) {
+app.post('/api/post/:id/like',  function (req, res) {
+    if  (req.isAuthenticated() == true){
+        let id = req.params.id
+         client.likePicture(id , function (err, img) {
             if (err)  return res.status(500).send(err.message);
             res.status(200).send('hola')
         })
+    } else{
+        return res.status(404).send( { error: 'not authenticated' } )
+    }
 })
-
 app.get('/api/user/:username', function (req, res) {
    let username = req.params.username;
    client.getUser(username, function (err, user) {

@@ -4,6 +4,7 @@ const yo = require('yo-yo'),
 
 module.exports = function postCard(post) {
     let el;
+    let auth = false;
 
     function render(post) {
         return yo `<article id=${post.publicId} class="_8Rm4L M9sTE  L_LMM SgTZ1   ">
@@ -38,14 +39,12 @@ module.exports = function postCard(post) {
 
             <!-- botones -->
             <section class="ltpMr Slqrh">
-            <form  id=${post.publicId}53 method="post" action="/api/post/like">
                 <input id=${post.publicId}54 class="ocult" value=${post.publicId} name="id">
                     <span class="fr66n" onclick=${post.liked ? like.bind(null, false) : like.bind(null, true)}>
                         <button class="coreSpriteHeartOpen oF4XW dCJp8"  onclick=${name}>
                             <span class="${post.liked ? 'glyphsSpriteHeart__filled__24__red_5' : 'glyphsSpriteHeart__outline__24__grey_9' } u-__7" aria-label="Me gusta"></span>
                         </button>
                     </span>
-                    </form>
             <span class="_15y0l ocult">
                 <button class="oF4XW dCJp8">
                     <span class="glyphsSpriteComment__outline__24__grey_9 u-__7" aria-label="Comentar"></span>
@@ -53,7 +52,7 @@ module.exports = function postCard(post) {
             </span>
             <span class="_5e4p ocult">
                     <button class="oF4XW dCJp8">
-                        <span class="glyphsSpriteShare__outline__24__grey_9 u-__7" aria-label="Compartir publicación"></span>
+                        <span class="glyphsSpriteShare__outline__24__grey_9 u-__7" aria-label=""></span>
                     </button>
                 </span>
                 <span class="wmtNn ocult">
@@ -95,28 +94,52 @@ module.exports = function postCard(post) {
                 </span>
             </button>
         </div>
-
         </article>`;
     }
 
     function like(liked) {
-        post.liked = liked;
-        post.likes += liked ? 1 : -1;
-        let newEl = render(post);
-        yo.update(el, newEl);
-        return false;
-    }
+    fetch('/whoami2')
+      .then(data =>   data.json())
+      .then(data =>  {
+          if (data.auth) {
+            post.liked = liked;
+            post.likes += liked ? 1 : -1;
+            let newEl = render(post);
+            yo.update(el, newEl);
+            return false;
+          }
+    })
+}
 
   function name() {
-    $.ajax({
-        url: `/api/post/${post.publicId}/like`,
-        type: 'post',
-        contentType: 'application/json',
-        data: JSON.stringify( { "id": `${post.publicId}` }),
-        aprocessData: false,
-        success: function (data) { console.log('like :)');
-         }
-      });
+      fetch('/whoami2')
+      .then(data =>   data.json())
+      .then(data =>  {
+          if (data.auth) {
+              auth = true
+            $.ajax({
+                url: `/api/post/${post.publicId}/like`,
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify( { "id": `${post.publicId}` }),
+                aprocessData: false,
+                statusCode:{
+                    404: (xhr) => {
+                        if (window.console) console.log(xhr.responseText)
+                    },
+                    200: (xhr) => {
+                        if (window.console) {
+                            console.log(xhr.responseText)
+                        }
+                    }
+                },
+                success: (data) => console.log(" like :) ")
+              });
+          } else {
+              auth = false
+              console.log("no estas autenticado, no se hace like");
+          }
+      })
   }
   el = render(post);
     return el;

@@ -76,7 +76,7 @@ let renderHeader = function (ctx) {
                           <a class=" Szr5J efNlB coreSpriteGlyphBlack" href="/">Instagram</a>
                       </div>
                   </div>
-                  <div class="LWmhU _0aCwM">
+                  <div class="LWmhU _0aCwM oculto">
                       <div class="pbgfb Di7vw " role="button" tabindex="0">
                           <div class="eyXLr wUAXcj ">
                               <span class="_6RZXI coreSpriteSearchIcon"></span>
