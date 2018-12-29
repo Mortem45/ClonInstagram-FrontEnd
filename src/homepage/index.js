@@ -8,7 +8,7 @@ const page = require('page'),
       picture = require('../post-card'),
       $ = require('jquery');
 
-const socker = io.connect('http://localhost:5151')
+const socker = io.connect('ws.mortem45.com')
 page('/', utils.loadAuth, header, loadPosts, function(ctx ,next){
     let main = document.getElementById('main-container');
     empty(main).appendChild(template(ctx.posts));
