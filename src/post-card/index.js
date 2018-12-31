@@ -98,25 +98,25 @@ module.exports = function postCard(post) {
     }
 
     function like(liked) {
-    fetch('/whoami2')
+    fetch('/whoami2',{ credentials: 'include' })
       .then(data =>   data.json())
       .then(data =>  {
-          if (data.auth) {
+          if (data.auth == true) {
             post.liked = liked;
             post.likes += liked ? 1 : -1;
             let newEl = render(post);
             yo.update(el, newEl);
             return false;
+          } else {
           }
     })
 }
 
   function name() {
-      fetch('/whoami2')
+      fetch('/whoami2',{ credentials: 'include' })
       .then(data =>   data.json())
       .then(data =>  {
-          if (data.auth) {
-              auth = true
+          if (data.auth ) {
             $.ajax({
                 url: `/api/post/${post.publicId}/like`,
                 type: 'post',
@@ -136,7 +136,6 @@ module.exports = function postCard(post) {
                 success: (data) => console.log(" like :) ")
               });
           } else {
-              auth = false
               console.log("no estas autenticado, no se hace like");
           }
       })
