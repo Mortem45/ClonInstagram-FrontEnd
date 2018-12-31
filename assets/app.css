@@ -2269,7 +2269,8 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: -1px; }
+  margin-right: -1px;
+  padding: 20px; }
 
 .r9-Os .tdiEy {
   font-size: 14px;

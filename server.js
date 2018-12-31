@@ -11,7 +11,8 @@ const express = require('express'),
         cloninstagram = require('cloninstagram-client'),
         auth = require('./auth'),
         fs = require('fs'),
-        https = require('https');
+        https = require('https'),
+        path = require('path');
 
 const httpPort = process.env.PORT || 5050;
 const httpsPort = process.env.PORTHTTPS || 5252;
@@ -50,9 +51,10 @@ app.use(expressSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 passport.use(auth.localStrategy);
 passport.use(auth.facebookStrategy);
@@ -192,8 +194,8 @@ app.listen(httpPort, function (err) {
 })
 
 https.createServer({
-    key: fs.readFileSync('key.key'),
-    cert: fs.readFileSync('key.crt')
+    key: fs.readFileSync(__dirname + '/key.key'),
+    cert: fs.readFileSync(--__dirname + '/key.crt')
 }, app).listen(httpsPort, function (err) {
     if (err) return console.log('Hubo un error'), process.exit(1);
     console.log(`server escuchando en puerto ${httpsPort}`)
