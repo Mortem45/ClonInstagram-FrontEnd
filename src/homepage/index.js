@@ -8,7 +8,7 @@ const page = require('page'),
       picture = require('../post-card'),
       $ = require('jquery');
 
-const socker = io.connect('ws.mortem45.com')
+const socker = io.connect('ww.cloninstagram.com')
 page('/', utils.loadAuth, header, loadPosts, function(ctx ,next){
     let main = document.getElementById('main-container');
     empty(main).appendChild(template(ctx.posts));
@@ -18,11 +18,7 @@ socker.on('image', function (image) {
     let postEl = document.getElementById('post-container');
     let first =  postEl.firstChild;
     let img = picture(image);
-    fetch(`/api/post/${image.publicId}`)
-        .then(res => console.log())
-        .catch( error => {
-            postEl.insertBefore(img, first);
-        })
+    postEl.insertBefore(img, first);
 })
 
 function loadPosts(ctx, next) {

@@ -2792,3 +2792,14 @@ footer {
         width: 100%;
     }
 }
+
+.post-list {
+    @include desktop() {
+        max-height: 400px;
+        height: 400px;
+    }
+    @include telefono() {
+        max-height: 200px;
+        height: 200px;
+    }
+}

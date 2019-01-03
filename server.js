@@ -195,7 +195,7 @@ app.listen(httpPort, function (err) {
 
 https.createServer({
     key: fs.readFileSync(__dirname + '/key.key'),
-    cert: fs.readFileSync(--__dirname + '/key.crt')
+    cert: fs.readFileSync(__dirname + '/key.crt')
 }, app).listen(httpsPort, function (err) {
     if (err) return console.log('Hubo un error'), process.exit(1);
     console.log(`server escuchando en puerto ${httpsPort}`)
