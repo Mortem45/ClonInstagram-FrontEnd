@@ -11,15 +11,9 @@ const express = require('express'),
         cloninstagram = require('cloninstagram-client'),
         auth = require('./auth'),
         path = require('path'),
-<<<<<<< HEAD
 	    MemoryStore = require('memorystore')(expressSession);
 
-const port = process.env.PORT || 5050;
-=======
-	MemoryStore = require('memorystore')(expressSession);
-
-const Port = process.env.PORT || 5050;
->>>>>>> 934b385e7c0ff229269d29caead2eeec42129ccb
+        const Port = process.env.PORT || 5050;
 
         let s3 = new aws.S3({
             accessKeyId: config.aws.accessKey,
@@ -195,14 +189,8 @@ app.get('/:username', function (req, res) {
     res.render('index', {title: `Instagram - ${req.params.username}` })
 })
 
-<<<<<<< HEAD
-app.listen(port, function (err) {
-    if (err) return console.log('Hubo un error'), process.exit(1);
-    console.log(`server escuchando en puerto ${port}`)
-=======
 app.listen(Port, function (err) {
     if (err) return console.log('Hubo un error'), process.exit(1);
     console.log(`server escuchando en puerto ${Port}`)
->>>>>>> 934b385e7c0ff229269d29caead2eeec42129ccb
 })
 
