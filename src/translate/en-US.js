@@ -1,0 +1,33 @@
+module.exports = {
+    likes: '{ likes, plural, ' +
+            '=0 {no likes}' +
+            '=1 {# like}' +
+            'other {# likes}}',
+    logout: 'Logout',
+    english: 'English',
+    spanish: 'Spanish',
+    'signup.subheading': 'Sign up to see photos and videos from your friends.',
+    'signup.facebook': 'Log in with Facebook',
+    'or': "OR",
+    'email': 'Email',
+    'username': 'Username',
+    'fullname': 'Full name',
+    'password': 'Password',
+    'signup.call-to-action': 'Sing up',
+    'signup.have-account': 'Have an account?',
+    'signin.username': 'Username',
+    'signin': 'Log in',
+    'recover': 'Forgot password?',
+    'signin.not-have-account': 'Don\'t have an account?',
+    'signup': 'Sign up',
+    'download': 'Get the app.',
+    'language': 'Language',
+    'search' :'Search',
+    'comment': 'Add a comment...',
+    'share': 'Share',
+    'upload': 'Upload',
+    'cancel': 'Cancel',
+    'get-it': 'I get it',
+    'alert.title': 'ClonInstagram',
+    'alert.text': 'This is an Instagram copy, made for educational purposes, this site is not intended to supplant the official site in any way.',
+}
