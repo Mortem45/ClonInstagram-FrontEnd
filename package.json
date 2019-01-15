@@ -5,11 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "node server.js",
-<<<<<<< HEAD
     "build": "gulp"
-=======
-    "build": "rm -r public & gulp"
->>>>>>> 934b385e7c0ff229269d29caead2eeec42129ccb
   },
   "author": "Brandon Estiben Monterrozo",
   "license": "MIT",
