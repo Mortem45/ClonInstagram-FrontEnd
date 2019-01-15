@@ -15,7 +15,11 @@ page('/', utils.loadAuth, header, loadPosts, function(ctx ,next){
 })
 
 socker.on('image', function (image) {
+<<<<<<< HEAD
     let postEl = document.getElementById('post-container');
+=======
+    let postEl = document.getElementById('post-container'); 
+>>>>>>> 934b385e7c0ff229269d29caead2eeec42129ccb
     let first =  postEl.firstElementChild;
     let img = picture(image);
     postEl.insertBefore(img, first)

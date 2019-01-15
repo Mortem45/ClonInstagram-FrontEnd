@@ -5,7 +5,11 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "node server.js",
+<<<<<<< HEAD
     "build": "gulp"
+=======
+    "build": "rm -r public & gulp"
+>>>>>>> 934b385e7c0ff229269d29caead2eeec42129ccb
   },
   "author": "Brandon Estiben Monterrozo",
   "license": "MIT",
@@ -35,6 +39,10 @@
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1",
     "gulp-watch": "^5.0.1",
+<<<<<<< HEAD
+=======
+    "memorystore": "^1.6.0",
+>>>>>>> 934b385e7c0ff229269d29caead2eeec42129ccb
     "node-sass": "^4.10.0",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.0"
