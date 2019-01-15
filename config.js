@@ -7,16 +7,16 @@ const config = {
   },
   client: {
     endpoints: {
-      pictures: 'http://api.cloninstagram.com/picture',
-      user: 'http://api.cloninstagram.com/user',
-      auth: 'http://api.cloninstagram.com/auth',
+      pictures: 'http://api.mortem45.com/pictures',
+      users: 'http://api.mortem45.com/user',
+      auth: 'http://api.mortem45.com/auth',
     }
   },
   auth: {
     facebook: {
       clientID: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-      callbackURL: 'http://cloninstagram.com/auth/facebook/callback'
+      callbackURL: 'https://www.mortem45.com/auth/facebook/callback'
     }
   },
   secret: process.env.CLONINSTAGRAM_SECRET || 'cloninstagram'

@@ -70,7 +70,7 @@ let renderHeader = function (ctx) {
       <div class="">
           <div class="barra-naveg ">
               <div class="MWDvN ">
-                  <div class="oJZym" style="margin-right: -77px;">
+                  <div class="oJZym" style="margin-right: -40px;">
                       <div class="aU2HW">
                           <a class="Szr5J coreSpriteDesktopNavLogoAndWordmark _7mese" href="/">Instagram</a>
                           <a class=" Szr5J efNlB coreSpriteGlyphBlack" href="/">Instagram</a>

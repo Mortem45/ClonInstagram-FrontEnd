@@ -37,7 +37,7 @@ exports.facebookStrategy = new FacebookStrategy({
     let userProfile = {
         username: profile._json.id,
         name: profile._json.name,
-        email: prodile._json.email,
+        email: profile._json.email,
         facebook: true
     }
 
@@ -54,7 +54,7 @@ exports.facebookStrategy = new FacebookStrategy({
         })
     })
 
-    function findOrCreate(userm, done) {
+    function findOrCreate(user, callback) {
         client.getUser(user.username, (err, usr) => {
             if (err) {
                 return client.saveUser(user, callback);
@@ -75,7 +75,8 @@ exports.serializeUser = function (user, done) {
 
 exports.deserializeUser = function (user, done) {
     client.getUser(user.username, (err, usr) => {
-        usr.token = user.token;
-        done(err, usr);
+       if (err) return done(err);
+	 usr.token = user.token;
+        done(null, usr);
     });
 }

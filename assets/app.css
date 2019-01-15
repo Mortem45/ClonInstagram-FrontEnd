@@ -2834,3 +2834,13 @@ footer {
 .post-image img {
   height: 100%;
   width: 100%; }
+
+@media only screen and (min-width: 1024px) {
+  .post-list {
+    max-height: 400px;
+    height: 400px; } }
+
+@media only screen and (max-width: 480px) {
+  .post-list {
+    max-height: 200px;
+    height: 200px; } }

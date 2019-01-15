@@ -2798,7 +2798,7 @@ footer {
         max-height: 400px;
         height: 400px;
     }
-    @include telefono() {
+    @include maxtelefono() {
         max-height: 200px;
         height: 200px;
     }

@@ -8,17 +8,17 @@ const page = require('page'),
       picture = require('../post-card'),
       $ = require('jquery');
 
-const socker = io.connect('ww.cloninstagram.com')
+const socker = io.connect('https://ws.mortem45.com')
 page('/', utils.loadAuth, header, loadPosts, function(ctx ,next){
     let main = document.getElementById('main-container');
     empty(main).appendChild(template(ctx.posts));
 })
 
 socker.on('image', function (image) {
-    let postEl = document.getElementById('post-container');
-    let first =  postEl.firstChild;
+    let postEl = document.getElementById('post-container'); 
+    let first =  postEl.firstElementChild;
     let img = picture(image);
-    postEl.insertBefore(img, first);
+    postEl.insertBefore(img, first)
 })
 
 function loadPosts(ctx, next) {

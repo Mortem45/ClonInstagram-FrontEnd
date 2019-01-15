@@ -10,12 +10,10 @@ const express = require('express'),
         passport = require('passport'),
         cloninstagram = require('cloninstagram-client'),
         auth = require('./auth'),
-        fs = require('fs'),
-        https = require('https'),
-        path = require('path');
+        path = require('path'),
+	MemoryStore = require('memorystore')(expressSession);
 
-const httpPort = process.env.PORT || 5050;
-const httpsPort = process.env.PORTHTTPS || 5252;
+const Port = process.env.PORT || 5050;
 
         let s3 = new aws.S3({
             accessKeyId: config.aws.accessKey,
@@ -43,6 +41,9 @@ app.set(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cookieParser());
 app.use(expressSession({
+    store: new MemoryStore({
+       checkPeriod: 86400000
+    }),
     secret: config.secret,
     resave: false,
     saveUninitialized: false
@@ -71,6 +72,7 @@ app.get('/signup',function (req, res){
 
 app.post('/signup', function (req, res) {
     let user = req.body;
+	console.log(user)
     client.saveUser(user, function (err, usr) {
         if (err) return res.status(500).send(err.message) ;
         res.redirect('/signin');
@@ -95,9 +97,8 @@ app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' }))
 
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
     successRedirect: '/',
-    failureRedirect: '/signin',
-    failureFlash:true
-}));
+    failureRedirect: '/signin'
+    }));
 
 function ensureAuth (req, res, next) {
     if (req.isAuthenticated()) {
@@ -133,7 +134,7 @@ app.get('/whoami2', function (req, res) {
 app.get('/api/posts', function (req, res) {
     client.listPictures(function (err, posts) {
         if ( err) return res.send([]);
-        res.send(posts);
+	 res.send(posts);
     })
 })
 app.post('/api/posts', ensureAuth, function (req, res) {
@@ -188,15 +189,8 @@ app.get('/:username', function (req, res) {
     res.render('index', {title: `Instagram - ${req.params.username}` })
 })
 
-app.listen(httpPort, function (err) {
+app.listen(Port, function (err) {
     if (err) return console.log('Hubo un error'), process.exit(1);
-    console.log(`server escuchando en puerto ${httpPort}`)
+    console.log(`server escuchando en puerto ${Port}`)
 })
 
-https.createServer({
-    key: fs.readFileSync(__dirname + '/key.key'),
-    cert: fs.readFileSync(__dirname + '/key.crt')
-}, app).listen(httpsPort, function (err) {
-    if (err) return console.log('Hubo un error'), process.exit(1);
-    console.log(`server escuchando en puerto ${httpsPort}`)
-})
