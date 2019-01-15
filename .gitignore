@@ -66,4 +66,3 @@ typings/
 public/
 env.sh
 .vscode/
-package-lock.json
