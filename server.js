@@ -194,3 +194,4 @@ app.listen(Port, function (err) {
     console.log(`server escuchando en puerto ${Port}`)
 })
 
+module.exports = app

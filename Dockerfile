@@ -12,6 +12,8 @@ RUN npm install --only=development
 
 RUN npm run build
 
+RUN npm test
+
 
 # Productive image
 FROM node:10
