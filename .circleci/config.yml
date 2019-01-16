@@ -8,7 +8,13 @@ jobs:
         steps:
             - setup_remote_docker
             - checkout
-            - run: docker build -t app .
+            - run:
+                name: build Docker
+                command: |
+                    echo $AWS_ACCESS_KEY
+                    echo $FACEBOOK_CLIENT_ID
+                    docker build -t app .
+
             - restore_cache:
                     keys:
                     - v1-dependencies-{{ checksum "package.json" }}

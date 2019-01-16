@@ -4,6 +4,5 @@ Dockerfile
 .circleci
 .git
 .vscode
-env.sh
 node_modules
 public
